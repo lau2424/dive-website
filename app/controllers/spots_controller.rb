@@ -2,6 +2,17 @@ class SpotsController < ApplicationController
 
   def index
     @spots = Spot.all
+
+    # The `geocoded` scope filters only flats with coordinates
+    @markers = @spots.geocoded.map do |spot|
+      {
+        lat: spot.latitude,
+        lng: spot.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { spot: spot }),
+        image_url: helpers.asset_url("scuba-diving-icon.svg")
+      }
+    end
+
   end
 
   def show
