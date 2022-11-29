@@ -41,4 +41,3 @@ class SpotsController < ApplicationController
     params.require(:butler).permit(:name, :description, :longitude, :latitude, :facility, :equipment, :difficulty)
   end
 end
-end
