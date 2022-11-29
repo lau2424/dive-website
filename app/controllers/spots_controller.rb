@@ -1,12 +1,12 @@
 class SpotsController < ApplicationController
 
   def index
-      @spots = Spot.all
+    @spots = Spot.all
   end
 
   def show
     @spot = Spot.find(params[:id])
-    # @review = Reviewtable.new
+    @review = Review.new
   end
 
   def new
@@ -15,25 +15,38 @@ class SpotsController < ApplicationController
 
   def create
     @spot = Spot.new(spot_params)
+    @user = current_user
+    @spot.user = @user
     if @spot.save
-      redirect_to spots_path
+      redirect_to spot_path(@spot)
     else
       render :new, status: :unprocessable_entity
     end
   end
 
   def edit
-    @spot = Spot.find(paramas[:id])
+    @spot = Spot.find(params[:id])
+  end
+
+  def update
+    @spot = Spot.find(params[:id])
+    @spot.update(spot_params)
+    if @spot.update(spot_params)
+      redirect_to spot_path(@spot)
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
-    @spot = Spot.find(paramas[:id])
+    @spot = Spot.find(params[:id])
     @spot.destroy
+    redirect_to root_path
   end
-  
+
   private
 
   def spot_params
-    params.require(:butler).permit(:name, :description, :longitude, :latitude, :facility, :equipment, :difficulty)
+    params.require(:spot).permit(:name, :description, :longitude, :latitude, :facility, :category, :difficulty, :address)
   end
 end
