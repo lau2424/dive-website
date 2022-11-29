@@ -67,12 +67,14 @@ spot_details = {
   facility: "Boat tours to reach the site. Tours with meals included.",
   difficulty: "Advanced",
   description: "The best wreck dive in the world, the SS Thistlegorm lies in the northern section of the Red Sea.
+
   As a popular day trip and liveaboard stop, it’s easily accessible from Sharm El-Sheikh.
   The wreck itself was a 420-foot (128-meter) British transport ship.
   Unfortunately, she met her fate in 1941 when she was sunk by a German air attack.
   Today, she remains a window into history with a visible cargo of trucks, jeeps, motorcycles,
   tanks and even a locomotive.",
   user: user
+
 }
 spot_1 = Spot.new(spot_details)
 spot_1.save!
@@ -418,6 +420,7 @@ spot_details_20 = {
 }
 spot_20 = Spot.new(spot_details_20)
 spot_20.save
+
 
 # the review content and reviewer Start 29/11 15h40
 
