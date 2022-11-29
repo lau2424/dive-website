@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
   root to: "spots#index"
+  devise_for :users
 
   resources :spots do
     resources :reviews

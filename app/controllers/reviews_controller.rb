@@ -1,12 +1,13 @@
 class ReviewsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:show]
+  
   def new
-    @spot = Spot.find(params[:butler_id])
+    @spot = Spot.find(params[:spot_id])
     @review = Review.new
-
   end
 
   def create
-    @butler = Spot.find(params[:spot_id])
+    @spot = Spot.find(params[:spot_id])
     @user = current_user
     @review = Review.new(review_params)
     @review.user = @user
