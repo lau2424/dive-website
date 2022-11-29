@@ -11,6 +11,10 @@
 # facilities
 
 # example of user that creates a spot
+Review.destroy_all
+Spot.destroy_all
+User.destroy_all
+
 user_details = {
   email: "tiagoscmatos@hotmail.com",
   password: "123456",
@@ -52,16 +56,6 @@ user_details_4 = {
 user_4 = User.new(user_details_4)
 user_4.save
 
-# Example of a user that creates a review
-user_reviewer_1 = {
-  email: "bastien.albertine@hotmail.com",
-  password: "123456",
-  first_name: "Bastien",
-  last_name: "Albertine"
-}
-user_reviewer_1 = User.new(user_reviewer_1)
-user_reviewer_1.save
-
 # USER DETAILS CREATION OF THE ACTUAL SPOT
 
 # spot 1
@@ -73,15 +67,15 @@ spot_details = {
   facility: "Boat tours to reach the site. Tours with meals included.",
   difficulty: "Advanced",
   description: "The best wreck dive in the world, the SS Thistlegorm lies in the northern section of the Red Sea.
-   As a popular day trip and liveaboard stop, it’s easily accessible from Sharm El-Sheikh.
-   The wreck itself was a 420-foot (128-meter) British transport ship.
-   Unfortunately, she met her fate in 1941 when she was sunk by a German air attack.
-   Today, she remains a window into history with a visible cargo of trucks, jeeps, motorcycles,
-   tanks and even a locomotive.",
+  As a popular day trip and liveaboard stop, it’s easily accessible from Sharm El-Sheikh.
+  The wreck itself was a 420-foot (128-meter) British transport ship.
+  Unfortunately, she met her fate in 1941 when she was sunk by a German air attack.
+  Today, she remains a window into history with a visible cargo of trucks, jeeps, motorcycles,
+  tanks and even a locomotive.",
   user: user
 }
-spot = Spot.new(spot_details)
-spot.save
+spot_1 = Spot.new(spot_details)
+spot_1.save!
 
 # spot 2
 spot_details_2 = {
@@ -101,15 +95,15 @@ spot_details_2 = {
   Many Blue Corner alumni claim that they have never seen so many sharks on a single dive.",
   user: user
 }
-spot = Spot.new(spot_details_2)
-spot.save
+spot_2 = Spot.new(spot_details_2)
+spot_2.save
 
 # spot 3
 spot_details_3 = {
   name: "Manta Night Dive",
   latitude: 19.560126941809703,
   longitude: -155.96496707376184,
-  category: "Scubadiving",
+  category: "Snorkling",
   facility: "Farmers market, Lounge Bar, Resorts and Hotels",
   difficulty: "Beginner",
   description: "Certainly one of the most unique night dives, the Manta Night Dive is a ballet for manta rays.
@@ -118,8 +112,8 @@ spot_details_3 = {
   All the divers need to do is relax and enjoy the show while the graceful manta rays turn and spin overhead.",
   user: user
 }
-spot = Spot.new(spot_details_3)
-spot.save
+spot_3 = Spot.new(spot_details_3)
+spot_3.save
 
 # spot 4
 spot_details_4 = {
@@ -128,7 +122,7 @@ spot_details_4 = {
   longitude: -87.57778441803842,
   category: "Scubadiving",
   facility: "Accomodation, Restaurants",
-  difficulty: "Beginner",
+  difficulty: "Advanced",
   description: "There are thousands of cenotes scattered throughout the Yucatan Peninsula of Mexico,
   and many of them could easily find a spot on this list.
   But the mystical quality of Cenote Angelita makes it hard to ignore.
@@ -137,8 +131,8 @@ spot_details_4 = {
   The appearance of this cloudy substance is otherworldly and makes for fantastic underwater photography.",
   user: user
 }
-spot = Spot.new(spot_details_4)
-spot.save
+spot_4 = Spot.new(spot_details_4)
+spot_4.save
 
 spot_details_5 = {
   name: "Silfra Fissure",
@@ -156,8 +150,8 @@ spot_details_5 = {
    between the rock faces of the plates.",
   user: user
 }
-spot = Spot.new(spot_details_5)
-spot.save
+spot_5 = Spot.new(spot_details_5)
+spot_5.save
 
 spot_details_6 = {
   name: "Sardine Run",
@@ -175,8 +169,8 @@ spot_details_6 = {
   When one of these congregations is finally found, divers jump in quickly to see the feeding frenzy.",
   user: user
 }
-spot = Spot.new(spot_details_6)
-spot.save
+spot_6 = Spot.new(spot_details_6)
+spot_6.save
 
 spot_details_7 = {
   name: "Cape Kri",
@@ -193,8 +187,8 @@ spot_details_7 = {
   taking in all the colourful life around you.",
   user: user
 }
-spot = Spot.new(spot_details_7)
-spot.save
+spot_7 = Spot.new(spot_details_7)
+spot_7.save
 
 spot_details_8 = {
   name: "Koh Lipe",
@@ -211,8 +205,8 @@ spot_details_8 = {
   which makes this island one of the most beautiful vacation destinations in Thailand!",
   user: user
 }
-spot = Spot.new(spot_details_8)
-spot.save
+spot_8 = Spot.new(spot_details_8)
+spot_8.save
 
 spot_details_9 = {
   name: "Mana Island",
@@ -229,8 +223,8 @@ spot_details_9 = {
   On both sides of the island, they had long strings of buoys floating out to good patches of coral. ",
   user: user
 }
-spot = Spot.new(spot_details_9)
-spot.save
+spot_9 = Spot.new(spot_details_9)
+spot_9.save
 
 spot_details_10 = {
   name: "Moorea",
@@ -247,8 +241,8 @@ spot_details_10 = {
   and beautiful coral. ",
   user: user
 }
-spot = Spot.new(spot_details_10)
-spot.save
+spot_10 = Spot.new(spot_details_10)
+spot_10.save
 
 spot_details_11 = {
   name: "Jardines de ka Reina",
@@ -268,8 +262,8 @@ spot_details_11 = {
   crocodile.",
   user: user
 }
-spot = Spot.new(spot_details_11)
-spot.save
+spot_11 = Spot.new(spot_details_11)
+spot_11.save
 
 spot_details_12 = {
   name: "Emergence du Ressel",
@@ -287,8 +281,8 @@ spot_details_12 = {
   We teach and dive according to TDI / IANTD / GUE training standards",
   user: user
 }
-spot = Spot.new(spot_details_12)
-spot.save
+spot_12 = Spot.new(spot_details_12)
+spot_12.save
 
 spot_details_13 = {
   name: "Darwin’s Arch",
@@ -304,8 +298,8 @@ spot_details_13 = {
   sits 115 miles from the next outpost of land.",
   user: user
 }
-spot = Spot.new(spot_details_13)
-spot.save
+spot_13 = Spot.new(spot_details_13)
+spot_13.save
 
 spot_details_14 = {
   name: "Race Rocks",
@@ -319,8 +313,8 @@ spot_details_14 = {
    California and Steller sea lions are seen on most dives, and on occasion, killer whales are also observed.",
   user: user
 }
-spot = Spot.new(spot_details_14)
-spot.save
+spot_14 = Spot.new(spot_details_14)
+spot_14.save
 
 spot_details_15 = {
   name: "Ship Wreck MV Superior Producer",
@@ -337,8 +331,8 @@ spot_details_15 = {
   freedivers and snorkelers alike arrived on the shoreline from all over the island to scavenge the wreck for its cargo.",
   user: user
 }
-spot = Spot.new(spot_details_15)
-spot.save
+spot_15 = Spot.new(spot_details_15)
+spot_15.save
 
 spot_details_16 = {
   name: "Banana Reef",
@@ -354,8 +348,8 @@ spot_details_16 = {
   Banana Reef features an area for snorkelers above the coral wall and is perfect for all divers.",
   user: user
 }
-spot = Spot.new(spot_details_16)
-spot.save
+spot_16 = Spot.new(spot_details_16)
+spot_16.save
 
 spot_details_17 = {
   name: "Rasfari",
@@ -373,8 +367,8 @@ spot_details_17 = {
   surgeonfish and all kinds of snappers!",
   user: user
 }
-spot = Spot.new(spot_details_17)
-spot.save
+spot_17 = Spot.new(spot_details_17)
+spot_17.save
 
 spot_details_18 = {
   name: "South Malé Atoll",
@@ -389,8 +383,8 @@ spot_details_18 = {
   Swim with care over the ocean floor, and you might spot a leopard shark sleeping peacefully in the sand!",
   user: user
 }
-spot = Spot.new(spot_details_18)
-spot.save
+spot_18 = Spot.new(spot_details_18)
+spot_18.save
 
 spot_details_19 = {
   name: "Doctors Cave Reef",
@@ -405,8 +399,8 @@ spot_details_19 = {
   and can be accessed from the public beach.",
   user: user
 }
-spot = Spot.new(spot_details_19)
-spot.save
+spot_19 = Spot.new(spot_details_19)
+spot_19.save
 
 spot_details_20 = {
   name: "Bloddy Bay",
@@ -422,15 +416,134 @@ spot_details_20 = {
   Just be aware of jet skis, that is why snorkelling around to the small beach and following the rocks out is a safe bet.",
   user: user
 }
-spot = Spot.new(spot_details_20)
-spot.save
+spot_20 = Spot.new(spot_details_20)
+spot_20.save
 
-# the review content
-review_content = {
-  content: "One of the best skubadiving spots I've made",
-  rating: 4,
-  user: user_reviewer_1,
-  spot: spot
+# the review content and reviewer Start 29/11 15h40
+
+# Example of a user that creates a review
+user_reviewer_1 = {
+  email: "matthew.albertine@hotmail.com",
+  password: "123456",
+  first_name: "Matthew",
+  last_name: "Harwood"
 }
-review = Review.new(review_content)
-review.save
+user_reviewer_1 = User.new(user_reviewer_1)
+user_reviewer_1.save
+
+#reviews content
+review_content_1 = {
+  content: "One of the top dives in the Red Sea and one of the greatest and most famous wreck dives in the world.
+  This stunning piece of history is a must visit when diving in the Red Sea.
+  It can be very busy with divers but the shear size of it is awesome and an interesting dive filled with history.",
+  rating: 5,
+  user: user_reviewer_1,
+  spot: spot_1
+}
+review_1 = Review.new(review_content_1)
+review_1.save
+
+
+user_reviewer_2 = {
+  email: "Guilhermp.p@hotmail.com",
+  password: "123456",
+  first_name: "Guilhermo",
+  last_name: "Pascual"
+}
+user_reviewer_2 = User.new(user_reviewer_2)
+user_reviewer_2.save
+
+review_content_2 = {
+  content: "Spectacular dive full of gray sharks, jacks, barracudas, napoleons, etc.",
+  rating: 5,
+  user: user_reviewer_2,
+  spot: spot_2
+}
+review_2 = Review.new(review_content_2)
+review_2.save
+
+
+user_reviewer_3 = {
+  email: "jess@hotmail.com",
+  password: "123456",
+  first_name: "Jessica",
+  last_name: "S"
+}
+user_reviewer_3 = User.new(user_reviewer_3)
+user_reviewer_3.save
+
+review_content_3 = {
+  content: "I did the manta night snorkel and had a ton of fun! (We saw 3 mantas the night I went.)",
+  rating: 5,
+  user: user_reviewer_3,
+  spot: spot_3
+}
+review_3 = Review.new(review_content_3)
+review_3.save
+
+
+user_reviewer_4 = {
+  email: "jet@hotmail.com",
+  password: "123456",
+  first_name: "Alistair",
+  last_name: "T"
+}
+user_reviewer_4 = User.new(user_reviewer_4)
+user_reviewer_4.save
+
+review_content_4 = {
+  content: "At times this dive seemed quite surreal.
+  On descent, the water seemed quite murky at first but then it clears nicely.
+  There was a clear halo cline around 8m's which is always fun to play with.
+  At around 30m's you get to the bottom and it is like a scene out of Sleepy Hollow.
+  The thick cloud of hydrogen sulphide with rocks and the remains of dear trees
+  emerging from it give this dive quite an atmosphere. great fun",
+  rating: 5,
+  user: user_reviewer_4,
+  spot: spot_4
+}
+review_4 = Review.new(review_content_4)
+review_4.save
+
+
+user_reviewer_5 = {
+  email: "thom@hotmail.com",
+  password: "123456",
+  first_name: "Thomas",
+  last_name: "Rindfuss"
+}
+user_reviewer_5 = User.new(user_reviewer_5)
+user_reviewer_5.save
+
+review_content_5 = {
+  content: "There were a lot of people so it took a while to get everybody dressed
+  in their gear and there was quite a line to get in the water so we were _very_ cold
+  before we got in the water.
+  The water is drinkable spring water and visibility is great, or it should be.
+  As snorkels towards the end of the end of the snorkeling trail kick up silt,
+  the visibility gets slightly less stellar.",
+  rating: 4,
+  user: user_reviewer_5,
+  spot: spot_5
+}
+review_5 = Review.new(review_content_5)
+review_5.save
+
+user_reviewer_6 = {
+  email: "vorismelb@hotmail.com",
+  password: "123456",
+  first_name: "Stephanie",
+  last_name: "Voris"
+}
+user_reviewer_6 = User.new(user_reviewer_6)
+user_reviewer_6.save
+
+review_content_6 = {
+  content: "Awesome trip! So much marine life during this time of the sardine run and an excellent operation in Pro Dive
+  to make our experience wonderful!!",
+  rating: 5,
+  user: user_reviewer_6,
+  spot: spot_6
+}
+review_6 = Review.new(review_content_6)
+review_6.save
