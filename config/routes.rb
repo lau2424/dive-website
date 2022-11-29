@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :spots do
     resources :reviews
   end
+
+  resources :spots, only: :destroy, as: :destroy_spot
 end

@@ -1,5 +1,12 @@
-documentation = https://openweathermap.org/current
+<%# documentation = https://openweathermap.org/current
 api = https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
 https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid={api}
+api = [ENV['API1'], ENV['API2'], ENV['API3'].sample %>
 
-api = [API-1, API-2, API3].sample
+<h1>Details about your spot!</h1>
+
+<%= @spot.name %> | description: <%= @spot.description %> | coordinates: <%= @spot.latitude %> <%= @spot.longitude %> | first_name: <%= @spot.user.first_name %>
+
+<%= link_to "Edit this spot", edit_spot_path(@spot) %>
+<%= link_to "Delete this spot", destroy_spot_path(@spot), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+<%= link_to "Back to list", root_path %>
