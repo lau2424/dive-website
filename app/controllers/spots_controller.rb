@@ -37,7 +37,7 @@ class SpotsController < ApplicationController
 
   private
 
-  def butler_params
+  def spot_params
     params.require(:butler).permit(:name, :description, :longitude, :latitude, :facility, :equipment, :difficulty)
   end
 end
