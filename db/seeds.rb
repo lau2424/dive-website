@@ -78,7 +78,7 @@ spot_details = {
    Unfortunately, she met her fate in 1941 when she was sunk by a German air attack.
    Today, she remains a window into history with a visible cargo of trucks, jeeps, motorcycles,
    tanks and even a locomotive.",
-  user: user
+  user_id: user
 }
 spot = Spot.new(spot_details)
 spot.save
@@ -99,7 +99,7 @@ spot_details_2 = {
   Divers use reef hooks to carefully attach to the wall and watch a number of pelagic species swim past.
   Common sights include tuna, sharks and eagle rays.
   Many Blue Corner alumni claim that they have never seen so many sharks on a single dive.",
-  user: user
+  user_id: user
 }
 spot = Spot.new(spot_details_2)
 spot.save
@@ -116,7 +116,7 @@ spot_details_3 = {
   Just off the coast of Kona is an artificially illuminated area where divers descend to the sandy observation areas.
   As the light attracts plankton, mantas arrive to take advantage of the feast.
   All the divers need to do is relax and enjoy the show while the graceful manta rays turn and spin overhead.",
-  user: user
+  user_id: user
 }
 spot = Spot.new(spot_details_3)
 spot.save
@@ -135,7 +135,7 @@ spot_details_4 = {
   At approximately 100 feet (30 meters),
   the clear freshwater is separated from the saltwater below by a layer of hydrogen sulphate.
   The appearance of this cloudy substance is otherworldly and makes for fantastic underwater photography.",
-  user: user
+  user_id: user
 }
 spot = Spot.new(spot_details_4)
 spot.save
@@ -154,7 +154,7 @@ spot_details_5 = {
   exploring the space between the North American and Eurasian tectonic plates is a dream.
   Glide along with the aquatic grasses full of blues and greens before snapping a picture
    between the rock faces of the plates.",
-  user: user
+  user_id: user
 }
 spot = Spot.new(spot_details_5)
 spot.save
@@ -173,7 +173,7 @@ spot_details_6 = {
   These larger animals include dolphins, birds, sharks and whales.
   Diving the sardine run requires patience as dive boats spend many hours on the chilly seas searching for bait balls.
   When one of these congregations is finally found, divers jump in quickly to see the feeding frenzy.",
-  user: user
+  user_id: user
 }
 spot = Spot.new(spot_details_6)
 spot.save
@@ -191,7 +191,7 @@ spot_details_7 = {
   The diving conditions at Cape Kri are suitable for all levels.
   You just need to dive into the warm water and slowly glide along the healthy coral reef,
   taking in all the colourful life around you.",
-  user: user
+  user_id: user
 }
 spot = Spot.new(spot_details_7)
 spot.save
@@ -209,7 +209,7 @@ spot_details_8 = {
   But visitors are also thrilled by the snow-white sandy beaches,
   the palm trees and the warm and turquoise sea,
   which makes this island one of the most beautiful vacation destinations in Thailand!",
-  user: user
+  user_id: user
 }
 spot = Spot.new(spot_details_8)
 spot.save
@@ -227,7 +227,7 @@ spot_details_9 = {
   The fact that it is so easy to snorkel off the beach in Fiji makes it perfect for families learning to snorkel!
   On Mana Island, they have a ‘safe swimming area’ which was cordoned off for people who weren’t confident swimmers.
   On both sides of the island, they had long strings of buoys floating out to good patches of coral. ",
-  user: user
+  user_id: user
 }
 spot = Spot.new(spot_details_9)
 spot.save
@@ -245,7 +245,7 @@ spot_details_10 = {
   Once arriving, you will quickly realize why Moorea is a bucket list snorkeling destination for beginners.
   Moorea boasts extremely calm turquoise waters and soft white sand that welcome plenty of colorful fish
   and beautiful coral. ",
-  user: user
+  user_id: user
 }
 spot = Spot.new(spot_details_10)
 spot.save
@@ -266,7 +266,7 @@ spot_details_11 = {
   an overwhelming plethora of life unlike anywhere else in the Caribbean.
   The island is also one of the few places where divers can safely get up close and personal with the American saltwater
   crocodile.",
-  user: user
+  user_id: user
 }
 spot = Spot.new(spot_details_11)
 spot.save
@@ -285,7 +285,7 @@ spot_details_12 = {
   Our school is exclusively dedicated to cave diving and that is the main professional activity of our instructors.
   Several hundred annual caves dives are carried out from the school (courses, guided dives, explorations).
   We teach and dive according to TDI / IANTD / GUE training standards",
-  user: user
+  user_id: user
 }
 spot = Spot.new(spot_details_12)
 spot.save
@@ -302,7 +302,7 @@ spot_details_13 = {
   which serves as a viewing grounds for the hundreds and even thousands of schooling scalloped
   hammerheads and jacks that collect at this island — which, paired with Wolf,
   sits 115 miles from the next outpost of land.",
-  user: user
+  user_id: user
 }
 spot = Spot.new(spot_details_13)
 spot.save
@@ -317,7 +317,7 @@ spot_details_14 = {
   description: "Fast currents rush past this rocky inlet, but if you time it right,
    you can linger at this wall covered in strawberry anemones, white plumrose anemones and more.
    California and Steller sea lions are seen on most dives, and on occasion, killer whales are also observed.",
-  user: user
+  user_id: user
 }
 spot = Spot.new(spot_details_14)
 spot.save
@@ -335,7 +335,7 @@ spot_details_15 = {
   Superior Producer met an untimely end.
   Word of the sinking spread across Curaçao like wildfire! Scuba divers,
   freedivers and snorkelers alike arrived on the shoreline from all over the island to scavenge the wreck for its cargo.",
-  user: user
+  user_id: user
 }
 spot = Spot.new(spot_details_15)
 spot.save
@@ -352,7 +352,7 @@ spot_details_16 = {
   In the depths of Banana Reef, expect to see a wall of brilliantly-colored coral as well as caves
   and overhangs teeming with schools of fish, like giant squirrelfish, oriental sweetlips and Napoleon wrasse.
   Banana Reef features an area for snorkelers above the coral wall and is perfect for all divers.",
-  user: user
+  user_id: user
 }
 spot = Spot.new(spot_details_16)
 spot.save
@@ -371,7 +371,7 @@ spot_details_17 = {
   Divers can plunge a little deeper for brilliant views of tunas,
   barracudas and an array of exotics, like fusiliers, the Napoleon wrasse,
   surgeonfish and all kinds of snappers!",
-  user: user
+  user_id: user
 }
 spot = Spot.new(spot_details_17)
 spot.save
@@ -387,7 +387,7 @@ spot_details_18 = {
   With luck, you will be greeted by scores of grey reef sharks,
   eagle rays and jackfish swimming in a breathtaking world of vivid sponges and swaying gorgonians.
   Swim with care over the ocean floor, and you might spot a leopard shark sleeping peacefully in the sand!",
-  user: user
+  user_id: user
 }
 spot = Spot.new(spot_details_18)
 spot.save
@@ -403,7 +403,7 @@ spot_details_19 = {
   Secrets Reef snorkeling daily on site-Difficult Access, no public entry, so stay on site.
   Boat trip or Taxi to Doctor’s Cave to snorkel the reef there- Easy Access– most tours go here,
   and can be accessed from the public beach.",
-  user: user
+  user_id: user
 }
 spot = Spot.new(spot_details_19)
 spot.save
@@ -420,17 +420,17 @@ spot_details_20 = {
   You will see quite a few rays (stingrays, and if you are lucky eagle rays),
   puffer fish are quite common if you want to snorkel just off of the front of the beach.
   Just be aware of jet skis, that is why snorkelling around to the small beach and following the rocks out is a safe bet.",
-  user: user
+  user_id: user
 }
 spot = Spot.new(spot_details_20)
 spot.save
 
-# the review content
-review_content = {
-  content: "One of the best skubadiving spots I've made",
-  rating: 4,
-  user: user_reviewer_1,
-  spot: spot
-}
-review = Review.new(review_content)
-review.save
+# # the review content
+# review_content = {
+#   content: "One of the best skubadiving spots I've made",
+#   rating: 4,
+#   user: user_reviewer_1,
+#   spot: spot
+# }
+# review = Review.new(review_content)
+# review.save
