@@ -39,11 +39,7 @@ class SpotsController < ApplicationController
     @spot = Spot.find(paramas[:id])
     @spot.destroy
   end
-
-  def my_method
-
-  end
-
+  
   private
 
   def spot_params
