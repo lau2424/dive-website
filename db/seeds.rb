@@ -112,8 +112,6 @@ spot_details_3 = {
   category: "Snorkeling",
   facility: "Farmers market, Lounge Bar, Resorts and Hotels",
   difficulty: "Beginner",
-  file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-  spot.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
   description: "Certainly one of the most unique night dives, the Manta Night Dive is a ballet for manta rays.
   Just off the coast of Kona is an artificially illuminated area where divers descend to the sandy observation areas.
   As the light attracts plankton, mantas arrive to take advantage of the feast.
