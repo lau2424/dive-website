@@ -13,15 +13,39 @@ export default class extends Controller {
 
     this.map = new mapboxgl.Map({
       container: this.element,
-      style: "mapbox://styles/fabpsl/clb283avy004214lbcrmn9lgh"
+      style: "mapbox://styles/fabpsl/clb283avy004214lbcrmn9lgh",
+      zoom: 13
     })
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
     this.map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
       mapboxgl: mapboxgl }))
-
+    // Add zoom and rotation controls to the map.
+    this.map.addControl(new mapboxgl.NavigationControl());
+    this.#geolocate()
 
   }
+  #geolocate() {
+    // Initialize the GeolocateControl.
+    const geolocate = new mapboxgl.GeolocateControl({
+      positionOptions: {
+          enableHighAccuracy: true
+      },
+      trackUserLocation: true,
+      fitBoundsOptions: {
+        zoom: 8,
+      }
+    });
+    // Add the control to the map.
+    this.map.addControl(geolocate);
+    // Set an event listener that fires
+    // when a geolocate event occurs.
+    geolocate.on('geolocate', () => {
+      console.log('A geolocate event has occurred.');
+      // this.map.setZoom(3);
+    });
+  }
+
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.info_window)
