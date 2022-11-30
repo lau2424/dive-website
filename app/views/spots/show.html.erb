@@ -11,6 +11,7 @@ api = [ENV['API1'], ENV['API2'], ENV['API3'].sample %>
   <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
 <% end %>
 
+<h2>Add a review to this spot!</h2>
 
 <% if user_signed_in? %>
     <%= render "reviews/formreview", spot: @spot, review: @review %>
@@ -19,8 +20,9 @@ api = [ENV['API1'], ENV['API2'], ENV['API3'].sample %>
   <% end %>
 <ul>
 <% @spot.reviews.each do |review| %>
-  <li><%= review.content %> - <%= review.rating %> ⭐️ - by <%= review.user.first_name %></li>
+  <li><%= review.content %> - <%= "⭐️" * review.rating %> - by <%= review.user.first_name %> <%= cl_image_tag review.photo.key, height: 150, width: 200, crop: :fill if review.photo.attached?  %></li>
 <% end %>
+
 
 
 <%= link_to "Edit this spot", edit_spot_path(@spot) %>
