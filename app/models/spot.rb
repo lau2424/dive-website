@@ -1,11 +1,12 @@
 class Spot < ApplicationRecord
   belongs_to :user
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
   has_many_attached :photos
-  validate :max_2_photos, :min_1_photo
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+
+  validate :max_2_photos, :min_1_photo
 
   def max_2_photos
     errors.add(:photos, "maximum 2 pictures allowed") if photos.count > 2
