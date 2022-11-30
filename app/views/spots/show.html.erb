@@ -10,6 +10,11 @@ api = [ENV['API1'], ENV['API2'], ENV['API3'].sample %>
     <% @spot.reviews.each do |e| %>
     <li><%= e.content %> - <%= e.rating %> ⭐️ - by <%= e.user.first_name %></li>
     <% end %>
+
+<% @spot.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
+
 <%= link_to "Edit this spot", edit_spot_path(@spot) %>
 <%= link_to "Delete this spot", destroy_spot_path(@spot), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
 <%= link_to "Back to list", root_path %>
