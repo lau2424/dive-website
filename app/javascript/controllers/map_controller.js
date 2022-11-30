@@ -24,6 +24,15 @@ export default class extends Controller {
     this.map.addControl(new mapboxgl.NavigationControl());
     this.#geolocate()
 
+
+    this.map.on('dblclick', function(e) {
+      let coordinates = e.lngLat
+      console.log(coordinates)
+      new mapboxgl.Marker()
+        .setLngLat(coordinates)
+        .addTo(this.map)
+      });
+
   }
   #geolocate() {
     // Initialize the GeolocateControl.
