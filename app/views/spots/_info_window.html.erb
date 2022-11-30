@@ -3,7 +3,7 @@
 
 <% unless average_rating.nil?  %>
   <%= "rate :" %>
-  <% average_rating.times do  %>
+  <% average_rating.to_i.times do  %>
     ⭐️
   <% end %>
 <% end %>
