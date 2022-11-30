@@ -7,13 +7,21 @@ api = [ENV['API1'], ENV['API2'], ENV['API3'].sample %>
 
 <%= @spot.name %> | description: <%= @spot.description %> | coordinates: <%= @spot.latitude %> <%= @spot.longitude %> | first_name: <%= @spot.user.first_name %>
 
-    <% @spot.reviews.each do |e| %>
-    <li><%= e.content %> - <%= e.rating %> ⭐️ - by <%= e.user.first_name %></li>
-    <% end %>
-
 <% @spot.photos.each do |photo| %>
   <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
 <% end %>
+
+
+<% if user_signed_in? %>
+    <%= render "reviews/formreview", spot: @spot, review: @review %>
+  <% else %>
+    <%= link_to "Login to add review", new_user_session_path(@user) %>
+  <% end %>
+<ul>
+<% @spot.reviews.each do |review| %>
+  <li><%= review.content %> - <%= review.rating %> ⭐️ - by <%= review.user.first_name %></li>
+<% end %>
+
 
 <%= link_to "Edit this spot", edit_spot_path(@spot) %>
 <%= link_to "Delete this spot", destroy_spot_path(@spot), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>

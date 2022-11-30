@@ -1,5 +1,4 @@
-<h1>New review</h1>
-  <%= simple_form_for [@spot, @review] do |f| %>
+  <%= simple_form_for [spot, review] do |f| %>
     <%= f.input :content %>
     <%= f.label :rating %>
     <%= f.select(:rating, [0,1,2,3,4,5], {}, {:class => 'form-control'})%>
