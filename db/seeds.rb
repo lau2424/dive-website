@@ -77,7 +77,9 @@ spot_details = {
 
 }
 spot_1 = Spot.new(spot_details)
-file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
+file = URI.open('https://divemagazine.com/wp-content/uploads/shutterstock_73058680.jpg')
+spot_1.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+file = URI.open('https://upload.wikimedia.org/wikipedia/commons/8/8c/Thistlegorm_train_parts_minus_red_edit.jpg')
 spot_1.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_1.save!
 
@@ -100,7 +102,9 @@ spot_details_2 = {
     user: user
   }
   spot_2 = Spot.new(spot_details_2)
-  file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
+  file = URI.open('https://masterliveaboards.com/wp-content/uploads/2022/05/Aerial-view-of-Blue-Corner-dive-site-Palau-by-Jean-Bernard-Carillet.jpg')
+  spot_2.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+  file = URI.open('https://www.ravenware.com/factand/nofic/JUNIOR2.JPG')
   spot_2.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_2.save
 
@@ -119,7 +123,9 @@ spot_details_3 = {
   user: user
 }
 spot_3 = Spot.new(spot_details_3)
-file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSphfZDfxhfEhGpZux-ZcysZ3UiY4aCvrkLvQ&usqp=CAU')
+spot_3.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCdFuL1A16UWpGO4qNf3J1PM_tMWwW8dElsg&usqp=CAU')
 spot_3.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_3.save
 
@@ -140,7 +146,9 @@ spot_details_4 = {
   user: user
 }
 spot_4 = Spot.new(spot_details_4)
-file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZBZmg1ZaWqbJY8g7sJGMVqyGnmQD3UJJ3vw&usqp=CAU')
+spot_4.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfPgIEQneWK6l8ukI49MdZ5GZXkAIMZ1XWgQ&usqp=CAU')
 spot_4.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_4.save
 
@@ -161,7 +169,9 @@ spot_details_5 = {
   user: user
 }
 spot_5 = Spot.new(spot_details_5)
-file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjcgfLsAE7euf4QkWBPJl-JufxD93ZKEmo5g&usqp=CAU')
+spot_5.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBzUPrbt4vs2_XW0heKXylGOqCFFbmMXIBTw&usqp=CAU')
 spot_5.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_5.save
 
@@ -182,7 +192,9 @@ spot_details_6 = {
   user: user
 }
 spot_6 = Spot.new(spot_details_6)
-file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKs485RmLNgG_UUGoCC9ZEIbockuUSSINpWA&usqp=CAU')
+spot_6.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReqlRjPy7H_tIlzaqePheovGv3yqleSmz5hg&usqp=CAU')
 spot_6.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_6.save
 
@@ -202,7 +214,9 @@ spot_details_7 = {
   user: user
 }
 spot_7 = Spot.new(spot_details_7)
-file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYds8GHlTENtOP6FiDeJ0nT06iZ0BS_BrBaA&usqp=CAU')
+spot_7.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7U_dQGdSkx5-4mbU0CIHZrIV99bgYGpXmfg&usqp=CAU')
 spot_7.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_7.save
 
@@ -222,7 +236,9 @@ spot_details_8 = {
   user: user
 }
 spot_8 = Spot.new(spot_details_8)
-file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBbL-rmjr0FD9LIxwEiaGI8svp7d59HLwo4Q&usqp=CAU')
+spot_8.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ7meKdm9yZh_sM8EuRl3riXRqq7LlVPWTqw&usqp=CAU')
 spot_8.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_8.save
 
@@ -242,7 +258,9 @@ spot_details_9 = {
   user: user
 }
 spot_9 = Spot.new(spot_details_9)
-file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1tgDWmBLCtfljkQEM7oPgX0gFYQ5xnL6ZPg&usqp=CAU')
+spot_9.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLFKFpTFxm7NaSyOKcJx7SDc1iRY-8lCOqPQ&usqp=CAU')
 spot_9.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_9.save
 
@@ -262,7 +280,9 @@ spot_details_10 = {
   user: user
 }
 spot_10 = Spot.new(spot_details_10)
-file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSte1b0V1JH3ubqsr14zovGUUlHsUnzuYCzuA&usqp=CAU')
+spot_10.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlJe8ggCbSh-KH-RDif-XTSsBhMmoJJzCn9w&usqp=CAU')
 spot_10.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_10.save
 
@@ -285,7 +305,9 @@ spot_details_11 = {
   user: user
 }
 spot_11 = Spot.new(spot_details_11)
-file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtguYOhS7beEVmXN-tMeqsCXtQKJIOw06v2w&usqp=CAU')
+spot_11.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrH1H8uS5pjL5gb5jYU6Av3n1_j-m_lDiC4Q&usqp=CAU')
 spot_11.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_11.save
 
@@ -306,7 +328,7 @@ spot_details_12 = {
   user: user
 }
 spot_12 = Spot.new(spot_details_12)
-file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkadie-Sn0U-qV6Cb9g8P2T71wSlY5NaUUZA&usqp=CAU')
 spot_12.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_12.save
 
@@ -325,7 +347,7 @@ spot_details_13 = {
   user: user
 }
 spot_13 = Spot.new(spot_details_13)
-file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2OeziwOJtHlNQQte5a6lm645quUg_nHwU5g&usqp=CAU')
 spot_13.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_13.save
 
@@ -342,7 +364,7 @@ spot_details_14 = {
   user: user
 }
 spot_14 = Spot.new(spot_details_14)
-file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgJlnoY767LEXifMvM1_4HKaWQ7WgWXFDeXQ&usqp=CAU')
 spot_14.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_14.save
 
@@ -362,7 +384,7 @@ spot_details_15 = {
   user: user
 }
 spot_15 = Spot.new(spot_details_15)
-file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwzPvSd_6BZFwLMWkUP8Vuntlmf4E0HSE14g&usqp=CAU')
 spot_15.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_15.save
 
@@ -381,7 +403,9 @@ spot_details_16 = {
   user: user
 }
 spot_16 = Spot.new(spot_details_16)
-file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjc4kBPgWMsL2mGXg4xZ_IteuuesB6_skyJw&usqp=CAU')
+spot_16.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYFw8U3Pxads3lXEeiLsv_6jx7Nbvj0y-ivw&usqp=CAU')
 spot_16.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_16.save
 
@@ -402,7 +426,7 @@ spot_details_17 = {
   user: user
 }
 spot_17 = Spot.new(spot_details_17)
-file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4SqbsaD7Dd8fG_TEnuzfI9CJEEiqB3DsAJg&usqp=CAU')
 spot_17.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_17.save
 
@@ -420,7 +444,7 @@ spot_details_18 = {
   user: user
 }
 spot_18 = Spot.new(spot_details_18)
-file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu9F9QBq9MgMgNiCW5-9wwSFBbXrTCgka9OA&usqp=CAU')
 spot_18.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_18.save
 
@@ -438,12 +462,12 @@ spot_details_19 = {
   user: user
 }
 spot_19 = Spot.new(spot_details_19)
-file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO3kPExbwN-PFKLs1rcPSvSrzufB2tBUWRWg&usqp=CAU')
 spot_19.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_19.save
 
 spot_details_20 = {
-  name: "Bloddy Bay",
+  name: "Bloody Bay",
   latitude: 18.348078987081735,
   longitude: -78.33625990786027,
   category: "Snorkeling",
@@ -457,7 +481,7 @@ spot_details_20 = {
   user: user
 }
 spot_20 = Spot.new(spot_details_20)
-file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHsJFmh-1igc6kfeNvNfngxLPRgHA8nuOc-w&usqp=CAU')
 spot_20.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_20.save
 
