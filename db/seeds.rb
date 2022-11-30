@@ -78,7 +78,7 @@ spot_details = {
 }
 spot_1 = Spot.new(spot_details)
 file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-spot_1.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_1.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_1.save!
 
 # spot 2
@@ -101,7 +101,7 @@ spot_details_2 = {
   }
   spot_2 = Spot.new(spot_details_2)
   file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-  spot_2.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+  spot_2.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_2.save
 
 # spot 3
@@ -120,7 +120,7 @@ spot_details_3 = {
 }
 spot_3 = Spot.new(spot_details_3)
 file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-spot_3.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_3.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_3.save
 
 # spot 4
@@ -131,8 +131,6 @@ spot_details_4 = {
   category: "Scubadiving",
   facility: "Accomodation, Restaurants",
   difficulty: "Advanced",
-  file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-  spot.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
   description: "There are thousands of cenotes scattered throughout the Yucatan Peninsula of Mexico,
   and many of them could easily find a spot on this list.
   But the mystical quality of Cenote Angelita makes it hard to ignore.
@@ -143,7 +141,7 @@ spot_details_4 = {
 }
 spot_4 = Spot.new(spot_details_4)
 file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-spot_4.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_4.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_4.save
 
 spot_details_5 = {
@@ -153,8 +151,6 @@ spot_details_5 = {
   category: "Scubadiving, Snorkeling",
   facility: "Accomodation 5km",
   difficulty: "Beginner",
-  file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-  spot.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
   description: "Diving between continental plates may sound risky,
   but scuba divers flock to Silfra Fissure year-round for the pleasure.
   Granted, these plates are moving so slowly, that you will never know it.
@@ -166,7 +162,7 @@ spot_details_5 = {
 }
 spot_5 = Spot.new(spot_details_5)
 file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-spot_5.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_5.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_5.save
 
 spot_details_6 = {
@@ -176,8 +172,6 @@ spot_details_6 = {
   category: "Scubadiving",
   facility: "Accomodation, Restaurant, Bar, Supermarket",
   difficulty: "Beginner",
-  file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-  spot.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
   description: "Certainly an adventurous dive,
   the sardine run attracts pelagic-loving scuba divers to South Africa on an annual basis.
   During a few weeks from May to July, millions of sardines swim up the coast in order to reach Durban where they spawn.
@@ -189,7 +183,7 @@ spot_details_6 = {
 }
 spot_6 = Spot.new(spot_details_6)
 file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-spot_6.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_6.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_6.save
 
 spot_details_7 = {
@@ -199,8 +193,6 @@ spot_details_7 = {
   category: "Scubadiving, Snorkeling",
   facility: "Accomodation",
   difficulty: "Moderate - Advanced",
-  file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-  spot.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
   description: "Raja Ampat seems to be on every diver’s bucket list these days.
   There is good reason for it, and Cape Kri is one of the dive sites that put this region on the map.
   A few years ago, scientists recorded the most fish species on a single dive at this site.
@@ -211,7 +203,7 @@ spot_details_7 = {
 }
 spot_7 = Spot.new(spot_details_7)
 file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-spot_7.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_7.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_7.save
 
 spot_details_8 = {
@@ -221,8 +213,6 @@ spot_details_8 = {
   category: "Snorkeling",
   facility: "Accomodation, Bar, Restaurant, Supermarket",
   difficulty: "beginner",
-  file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-  spot.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
   description: "Koh Lipe is a tiny paradise island in the southernmost part of Thailand,
   not far from the Malaysian border.
   Due to its colorful and intact underwater world, it is one of the absolute hotspots for snorkeling!
@@ -233,7 +223,7 @@ spot_details_8 = {
 }
 spot_8 = Spot.new(spot_details_8)
 file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-spot_8.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_8.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_8.save
 
 spot_details_9 = {
@@ -243,8 +233,6 @@ spot_details_9 = {
   category: "Snorkeling",
   facility: "Accomodation, Airport",
   difficulty: "Beginner",
-  file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-  spot.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
   description: "Great Snorkeling in a couple of different locations.
   With shallow tidal reefs, these locations had in common ease of access,
   some pretty marine life and not too deep water.
@@ -255,7 +243,7 @@ spot_details_9 = {
 }
 spot_9 = Spot.new(spot_details_9)
 file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-spot_9.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_9.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_9.save
 
 spot_details_10 = {
@@ -265,8 +253,6 @@ spot_details_10 = {
   category: "Snorkeling",
   facility: "Accomodation, Restaurant, Airport, Hospital, Supermarket",
   difficulty: "Beginners",
-  file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-  spot.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
   description: "As one of the most underrated islands found in French Polynesia,
   Moorea offers a spectacular array of family-friendly snorkeling opportunities.
   The most common way to reach Moorea is through a simple 30-minute ferry from nearby Tahiti.
@@ -277,8 +263,8 @@ spot_details_10 = {
 }
 spot_10 = Spot.new(spot_details_10)
 file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-spot_10.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')s
-pot_10.save
+spot_10.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_10.save
 
 spot_details_11 = {
   name: "Jardines de la Reina",
@@ -287,8 +273,6 @@ spot_details_11 = {
   category: "Scubadiving",
   facility: "Boat Tours with Meals",
   difficulty: "Moderate to Advanced",
-  file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-  spot.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
   description: "Jardines de la Reina can only be visited by liveaboard.
   Cuba’s Jardines de la Reina (Garden of the Queens) Marine Park
   is home to the largest and best-preserved coral reef system in the Caribbean.
@@ -302,8 +286,8 @@ spot_details_11 = {
 }
 spot_11 = Spot.new(spot_details_11)
 file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-spot_11.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')s
-pot_11.save
+spot_11.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_11.save
 
 spot_details_12 = {
   name: "Emergence du Ressel",
@@ -312,23 +296,19 @@ spot_details_12 = {
   category: "Scubadiving",
   facility: "Accomodation",
   difficulty: "Beginner to Advanced",
-  file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-  spot.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
   description: "Located in the center of Quercy / Lot,
   the number one cave  diving destination in Europe (and the 3rd in the world),
   in our school you will be able to follow all types of training courses towards this fascinating world.
   The Cave To Be is the only local all year round open cave diving school and  facility in France.
   Our school is exclusively dedicated to cave diving and that is the main professional activity of our instructors.
-  Sefile = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-  spot.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')veral hundred annual caves dives are carried out from the school (courses,
-    guided dives, explorations).
+  guided dives, explorations).
   We teach and dive according to TDI / IANTD / GUE training standards",
   user: user
 }
 spot_12 = Spot.new(spot_details_12)
 file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-spot_12.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')s
-pot_12.save
+spot_12.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_12.save
 
 spot_details_13 = {
   name: "Darwin’s Arch",
@@ -337,8 +317,6 @@ spot_details_13 = {
   category: "Scubadiving",
   facility: "Boat tours",
   difficulty: "Advanced",
-  file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-  spot.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
   description: "Accessible by boat from tours on the Galapagos Islands.
   This stone arch sits atop an underwater plateau known as the Theater,
   which serves as a viewing grounds for the hundreds and even thousands of schooling scalloped
@@ -348,8 +326,8 @@ spot_details_13 = {
 }
 spot_13 = Spot.new(spot_details_13)
 file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-spot_13.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')s
-pot_13.save
+spot_13.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_13.save
 
 spot_details_14 = {
   name: "Race Rocks",
@@ -358,8 +336,6 @@ spot_details_14 = {
   category: "Scubadiving",
   facility: "Accomodation, Tours",
   difficulty: "Moderate",
-  file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-  spot.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
   description: "Fast currents rush past this rocky inlet, but if you time it right,
    you can linger at this wall covered in strawberry anemones, white plumrose anemones and more.
    California and Steller sea lions are seen on most dives, and on occasion, killer whales are also observed.",
@@ -367,8 +343,8 @@ spot_details_14 = {
 }
 spot_14 = Spot.new(spot_details_14)
 file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-spot_14.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')s
-pot_14.save
+spot_14.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_14.save
 
 spot_details_15 = {
   name: "Ship Wreck MV Superior Producer",
@@ -377,8 +353,6 @@ spot_details_15 = {
   category: "Scubadiving",
   facility: "Accomodation, Bar, Restaurant, Supermarket",
   difficulty: "Moderate",
-  file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-  spot.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
   description: "The Superior Producer is Curaçao’s iconic shipwreck and it is one of the most popular dive sites in Curaçao.
   This wreck diving site is rated as one of the top 5 dive sites in the Caribbean and certainly an essential Curaçao
   experience! Dive in with us now as we explore the history of this incredible shipwreck and how the
@@ -389,8 +363,8 @@ spot_details_15 = {
 }
 spot_15 = Spot.new(spot_details_15)
 file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-spot_15.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')s
-pot_15.save
+spot_15.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_15.save
 
 spot_details_16 = {
   name: "Banana Reef",
@@ -399,8 +373,6 @@ spot_details_16 = {
   category: "Scubadiving",
   facility: "Accomodation, Restaurant, Airport, Supermarket",
   difficulty: "Beginner to Advanced",
-  file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-  spot.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
   description: "Banana Reef was the first dive site discovered in the Maldives,
   and because of its exquisite ocean life and popularity, it is now a protected marine area.
   In the depths of Banana Reef, expect to see a wall of brilliantly-colored coral as well as caves
@@ -410,8 +382,8 @@ spot_details_16 = {
 }
 spot_16 = Spot.new(spot_details_16)
 file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-spot_16.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')s
-pot_16.save
+spot_16.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_16.save
 
 spot_details_17 = {
   name: "Rasfari",
@@ -420,8 +392,6 @@ spot_details_17 = {
   category: "Scubadiving",
   facility: "Accomodation",
   difficulty: "Beginner to Advanced",
-  file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-  spot.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
   description: "Small Island accessible only by boat.
   Rasfari is a spectacular medley of marine wildlife including grey reef sharks,
   whitetip reef sharks and silvertip sharks.
@@ -433,8 +403,8 @@ spot_details_17 = {
 }
 spot_17 = Spot.new(spot_details_17)
 file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-spot_17.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')s
-pot_17.save
+spot_17.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_17.save
 
 spot_details_18 = {
   name: "South Malé Atoll",
@@ -443,8 +413,6 @@ spot_details_18 = {
   category: "Scubadiving, Snorkeling",
   facility: "Accomodation",
   difficulty: "Advanced",
-  file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-  spot.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
   description: "Cocoa Corner provides one of the best shark shows and advanced dives in the Maldives.
   With luck, you will be greeted by scores of grey reef sharks,
   eagle rays and jackfish swimming in a breathtaking world of vivid sponges and swaying gorgonians.
@@ -453,8 +421,8 @@ spot_details_18 = {
 }
 spot_18 = Spot.new(spot_details_18)
 file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-spot_18.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')s
-pot_18.save
+spot_18.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_18.save
 
 spot_details_19 = {
   name: "Doctors Cave Reef",
@@ -463,8 +431,6 @@ spot_details_19 = {
   category: "Snorkeling",
   facility: "Accomodation, Bar, Restaurant",
   difficulty: "Moderate",
-  file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-  spot.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
   description: "Secrets Reef & Doctor’s Cave Reef- the two best BY FAR
   Secrets Reef snorkeling daily on site-Difficult Access, no public entry, so stay on site.
   Boat trip or Taxi to Doctor’s Cave to snorkel the reef there- Easy Access– most tours go here,
@@ -473,8 +439,8 @@ spot_details_19 = {
 }
 spot_19 = Spot.new(spot_details_19)
 file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-spot_19.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')s
-pot_19.save
+spot_19.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_19.save
 
 spot_details_20 = {
   name: "Bloddy Bay",
@@ -483,8 +449,6 @@ spot_details_20 = {
   category: "Snorkeling",
   facility: "Accomodation, Bar, Restaurant, Supermarket",
   difficulty: "Beginner",
-  file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-  spot.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
   description: "Swim out following the rocks to the point there is loads to see
   (right hand side of the beach looking out to see).
   You will see quite a few rays (stingrays, and if you are lucky eagle rays),
@@ -494,8 +458,8 @@ spot_details_20 = {
 }
 spot_20 = Spot.new(spot_details_20)
 file = URI.open('https://imgs.search.brave.com/SXzHQKCU-EyV3EwzEGL4W2Az59G8IWn_9Z7NF3XedeY/rs:fit:1200:1024:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVyczEz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNy8xMC9NYWxk/aXZlcy1TdW1tZXIt/UmVzb3J0LVNlYS1z/YW5keS1iZWFjaC1j/b2NvbnV0LXRyZWVz/LXdhdmVzLURlc2t0/b3AtV2FsbHBhcGVy/LUhELTE5MjB4MTA4/MC0xMjgweDEwMjQu/anBn')
-spot_20.photo.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')s
-pot_20.save
+spot_20.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_20.save
 
 
 # the review content and reviewer Start 29/11 15h40
