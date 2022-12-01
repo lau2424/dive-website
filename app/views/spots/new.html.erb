@@ -1,8 +1,8 @@
 <%= simple_form_for(@spot) do |f| %>
   <%= f.input :name %>
   <%= f.input :description %>
-  <%= f.input :longitude %>
-  <%= f.input :latitude %>
+  <%= f.input :longitude, input_html: {value: params["lng"]} %>
+  <%= f.input :latitude, input_html: {value: params["lat"]} %>
   <%= f.input :facility %>
   <%= f.label :category %>
   <%= f.select(:category, ['Scuba diving', 'Snorkling'], {}, {:class => 'form-control'}) %>

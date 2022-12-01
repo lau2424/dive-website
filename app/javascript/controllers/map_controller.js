@@ -26,22 +26,25 @@ export default class extends Controller {
     this.#geolocate()
 
 
-    this.map.on('dblclick', function(e) {
+    this.map.on('contextmenu', function(e) {
       let coordinates = e.lngLat
       console.log(coordinates)
-      new mapboxgl.Marker()
-        .setLngLat(coordinates)
-        .addTo(this.map)
+      const url = `spots/new?lat=${e.lngLat.lat}&lng=${e.lngLat.lng}`
+      window.location.href = url;
+
+
+
+
+      // new mapboxgl.Popup()
+      //   .setLngLat(coordinates)
+      //   .setPopup(popup)
+      //   .addTo(this.map)
 // TODO : define URL
-URL = "http://localhost:3000/"
-      fetch(URL, {headers: {"Accept": "text/plain"}})
-      .then(response => response.text())
-      .then((data) => { insertAdjacentHTML(data)})
-      console.log(this.coordinatesTarget)
-
-
-
-
+      // URL = "http://localhost:3000/"
+      // fetch(URL, {headers: {"Accept": "text/plain"}})
+      // .then(response => response.text())
+      // .then((data) => { insertAdjacentHTML(data)})
+      // console.log(this.coordinatesTarget)
       });
 
   }
