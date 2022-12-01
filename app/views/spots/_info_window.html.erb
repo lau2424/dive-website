@@ -7,3 +7,10 @@
     ⭐️
   <% end %>
 <% end %>
+
+<div data-controller="weather">
+  <p hidden data-weather-target="latitude"><%= spot.latitude %></p>
+  <p hidden data-weather-target="longitude"><%= spot.longitude %></p>
+  <img src="" alt="Weather Icon" data-weather-target="icon">
+  <h3 data-weather-target="temperature"></h3>
+</div>
