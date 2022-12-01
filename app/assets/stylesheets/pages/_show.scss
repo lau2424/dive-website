@@ -1,0 +1,38 @@
+.body {
+  background: rgb(57,56,66);
+  background: radial-gradient(circle, rgba(57,56,66,1) 0%, rgba(227,227,231,1) 18%, rgba(211,226,233,1) 40%, rgba(194,225,235,1) 56%, rgba(173,223,237,1) 80%, rgba(51,58,60,1) 100%);
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.content {
+  margin: 0 10px;
+}
+
+.spot-ttl {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.spot-content {
+  text-align: justify;
+  margin: 20px 0;
+}
+
+.spot-photos {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.spot-photos > img {
+
+  width: auto;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
