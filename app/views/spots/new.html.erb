@@ -8,8 +8,8 @@
   <%= f.select(:category, ['Scuba diving', 'Snorkling'], {}, {:class => 'form-control'}) %>
   <%= f.label :difficulty %>
   <%= f.select(:difficulty, ['Beginner', 'Intermediate', 'Expert'], {}, {:class => 'form-control'}) %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.submit %>
 <% end %>
 
 
-<%# #  <%= f.input :photo, as: :file %>

@@ -1,4 +1,9 @@
+<%= cl_image_tag spot.photos.first.key, height: 50, width: 50, crop: :fill %>
 <h2><%= spot.name %></h2>
-<p>Address: <%= spot.address %></p>
-<p>Longitude: <%= spot.longitude %></p>
-<p>Latitude: <%= spot.latitude %></p>
+
+<% unless average_rating.nil?  %>
+  <%= "rate :" %>
+  <% average_rating.to_i.times do  %>
+    ⭐️
+  <% end %>
+<% end %>

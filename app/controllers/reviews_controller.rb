@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show]
-  
+
   def new
     @spot = Spot.find(params[:spot_id])
     @review = Review.new
@@ -19,7 +19,6 @@ class ReviewsController < ApplicationController
     end
   end
 
-
   def destroy
     @review = Review.find(params[:id])
     @review.destroy
@@ -29,6 +28,6 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:content, :rating)
+    params.require(:review).permit(:content, :rating, :photo)
   end
 end

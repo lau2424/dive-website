@@ -9,7 +9,7 @@
 # latitude longitude
 # category
 # facilities
-
+require 'open-uri'
 # example of user that creates a spot
 Review.destroy_all
 Spot.destroy_all
@@ -77,6 +77,10 @@ spot_details = {
 
 }
 spot_1 = Spot.new(spot_details)
+file = URI.open('https://divemagazine.com/wp-content/uploads/shutterstock_73058680.jpg')
+spot_1.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+file = URI.open('https://upload.wikimedia.org/wikipedia/commons/8/8c/Thistlegorm_train_parts_minus_red_edit.jpg')
+spot_1.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_1.save!
 
 # spot 2
@@ -91,13 +95,17 @@ spot_details_2 = {
   It consists of a reef-covered wall that runs along the side of Ngemelis Island in Palau.
   While the dive is great at any time due to the massive schools of fish,
   this dive site shows its best face when the currents are strong (think more current,
-  more fish – it’s never been more apt).
-  Divers use reef hooks to carefully attach to the wall and watch a number of pelagic species swim past.
-  Common sights include tuna, sharks and eagle rays.
-  Many Blue Corner alumni claim that they have never seen so many sharks on a single dive.",
-  user: user
-}
-spot_2 = Spot.new(spot_details_2)
+    more fish – it’s never been more apt).
+    Divers use reef hooks to carefully attach to the wall and watch a number of pelagic species swim past.
+    Common sights include tuna, sharks and eagle rays.
+    Many Blue Corner alumni claim that they have never seen so many sharks on a single dive.",
+    user: user
+  }
+  spot_2 = Spot.new(spot_details_2)
+  file = URI.open('https://masterliveaboards.com/wp-content/uploads/2022/05/Aerial-view-of-Blue-Corner-dive-site-Palau-by-Jean-Bernard-Carillet.jpg')
+  spot_2.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+  file = URI.open('https://www.ravenware.com/factand/nofic/JUNIOR2.JPG')
+  spot_2.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_2.save
 
 # spot 3
@@ -105,7 +113,7 @@ spot_details_3 = {
   name: "Manta Night Dive",
   latitude: 19.560126941809703,
   longitude: -155.96496707376184,
-  category: "Snorkling",
+  category: "Snorkeling",
   facility: "Farmers market, Lounge Bar, Resorts and Hotels",
   difficulty: "Beginner",
   description: "Certainly one of the most unique night dives, the Manta Night Dive is a ballet for manta rays.
@@ -115,6 +123,10 @@ spot_details_3 = {
   user: user
 }
 spot_3 = Spot.new(spot_details_3)
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSphfZDfxhfEhGpZux-ZcysZ3UiY4aCvrkLvQ&usqp=CAU')
+spot_3.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCdFuL1A16UWpGO4qNf3J1PM_tMWwW8dElsg&usqp=CAU')
+spot_3.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_3.save
 
 # spot 4
@@ -134,13 +146,17 @@ spot_details_4 = {
   user: user
 }
 spot_4 = Spot.new(spot_details_4)
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZBZmg1ZaWqbJY8g7sJGMVqyGnmQD3UJJ3vw&usqp=CAU')
+spot_4.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfPgIEQneWK6l8ukI49MdZ5GZXkAIMZ1XWgQ&usqp=CAU')
+spot_4.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_4.save
 
 spot_details_5 = {
   name: "Silfra Fissure",
   latitude: 64.25689674203579,
   longitude: -21.116868402671393,
-  category: "Scubadiving, Snorkling",
+  category: "Scubadiving, Snorkeling",
   facility: "Accomodation 5km",
   difficulty: "Beginner",
   description: "Diving between continental plates may sound risky,
@@ -153,6 +169,10 @@ spot_details_5 = {
   user: user
 }
 spot_5 = Spot.new(spot_details_5)
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjcgfLsAE7euf4QkWBPJl-JufxD93ZKEmo5g&usqp=CAU')
+spot_5.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBzUPrbt4vs2_XW0heKXylGOqCFFbmMXIBTw&usqp=CAU')
+spot_5.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_5.save
 
 spot_details_6 = {
@@ -172,13 +192,17 @@ spot_details_6 = {
   user: user
 }
 spot_6 = Spot.new(spot_details_6)
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKs485RmLNgG_UUGoCC9ZEIbockuUSSINpWA&usqp=CAU')
+spot_6.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReqlRjPy7H_tIlzaqePheovGv3yqleSmz5hg&usqp=CAU')
+spot_6.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_6.save
 
 spot_details_7 = {
   name: "Cape Kri",
   latitude: -0.556141417973152,
   longitude: 130.6905029261628,
-  category: "Scubadiving, Snorkling",
+  category: "Scubadiving, Snorkeling",
   facility: "Accomodation",
   difficulty: "Moderate - Advanced",
   description: "Raja Ampat seems to be on every diver’s bucket list these days.
@@ -190,13 +214,17 @@ spot_details_7 = {
   user: user
 }
 spot_7 = Spot.new(spot_details_7)
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYds8GHlTENtOP6FiDeJ0nT06iZ0BS_BrBaA&usqp=CAU')
+spot_7.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7U_dQGdSkx5-4mbU0CIHZrIV99bgYGpXmfg&usqp=CAU')
+spot_7.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_7.save
 
 spot_details_8 = {
   name: "Koh Lipe",
   latitude: 6.489452933250682,
   longitude: 99.30487531289059,
-  category: "Snorkling",
+  category: "Snorkeling",
   facility: "Accomodation, Bar, Restaurant, Supermarket",
   difficulty: "beginner",
   description: "Koh Lipe is a tiny paradise island in the southernmost part of Thailand,
@@ -208,16 +236,20 @@ spot_details_8 = {
   user: user
 }
 spot_8 = Spot.new(spot_details_8)
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBbL-rmjr0FD9LIxwEiaGI8svp7d59HLwo4Q&usqp=CAU')
+spot_8.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ7meKdm9yZh_sM8EuRl3riXRqq7LlVPWTqw&usqp=CAU')
+spot_8.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_8.save
 
 spot_details_9 = {
   name: "Mana Island",
   latitude: -17.672344424863915,
   longitude: 177.09859956806864,
-  category: "Snorkling",
+  category: "Snorkeling",
   facility: "Accomodation, Airport",
   difficulty: "Beginner",
-  description: "Great Snorkling in a couple of different locations.
+  description: "Great Snorkeling in a couple of different locations.
   With shallow tidal reefs, these locations had in common ease of access,
   some pretty marine life and not too deep water.
   The fact that it is so easy to snorkel off the beach in Fiji makes it perfect for families learning to snorkel!
@@ -226,13 +258,17 @@ spot_details_9 = {
   user: user
 }
 spot_9 = Spot.new(spot_details_9)
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1tgDWmBLCtfljkQEM7oPgX0gFYQ5xnL6ZPg&usqp=CAU')
+spot_9.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLFKFpTFxm7NaSyOKcJx7SDc1iRY-8lCOqPQ&usqp=CAU')
+spot_9.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_9.save
 
 spot_details_10 = {
   name: "Moorea",
   latitude: -17.531818677178045,
   longitude: -149.8270785761602,
-  category: "Snorkling",
+  category: "Snorkeling",
   facility: "Accomodation, Restaurant, Airport, Hospital, Supermarket",
   difficulty: "Beginners",
   description: "As one of the most underrated islands found in French Polynesia,
@@ -244,10 +280,14 @@ spot_details_10 = {
   user: user
 }
 spot_10 = Spot.new(spot_details_10)
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSte1b0V1JH3ubqsr14zovGUUlHsUnzuYCzuA&usqp=CAU')
+spot_10.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlJe8ggCbSh-KH-RDif-XTSsBhMmoJJzCn9w&usqp=CAU')
+spot_10.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_10.save
 
 spot_details_11 = {
-  name: "Jardines de ka Reina",
+  name: "Jardines de la Reina",
   latitude: 20.833974478268892,
   longitude: -78.91683840092857,
   category: "Scubadiving",
@@ -265,13 +305,17 @@ spot_details_11 = {
   user: user
 }
 spot_11 = Spot.new(spot_details_11)
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtguYOhS7beEVmXN-tMeqsCXtQKJIOw06v2w&usqp=CAU')
+spot_11.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrH1H8uS5pjL5gb5jYU6Av3n1_j-m_lDiC4Q&usqp=CAU')
+spot_11.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_11.save
 
 spot_details_12 = {
   name: "Emergence du Ressel",
   latitude: 44.56216707251125,
   longitude: 1.7720069292178797,
-  category: "Scubadaving",
+  category: "Scubadiving",
   facility: "Accomodation",
   difficulty: "Beginner to Advanced",
   description: "Located in the center of Quercy / Lot,
@@ -279,11 +323,13 @@ spot_details_12 = {
   in our school you will be able to follow all types of training courses towards this fascinating world.
   The Cave To Be is the only local all year round open cave diving school and  facility in France.
   Our school is exclusively dedicated to cave diving and that is the main professional activity of our instructors.
-  Several hundred annual caves dives are carried out from the school (courses, guided dives, explorations).
+  guided dives, explorations).
   We teach and dive according to TDI / IANTD / GUE training standards",
   user: user
 }
 spot_12 = Spot.new(spot_details_12)
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkadie-Sn0U-qV6Cb9g8P2T71wSlY5NaUUZA&usqp=CAU')
+spot_12.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_12.save
 
 spot_details_13 = {
@@ -301,6 +347,8 @@ spot_details_13 = {
   user: user
 }
 spot_13 = Spot.new(spot_details_13)
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2OeziwOJtHlNQQte5a6lm645quUg_nHwU5g&usqp=CAU')
+spot_13.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_13.save
 
 spot_details_14 = {
@@ -316,6 +364,8 @@ spot_details_14 = {
   user: user
 }
 spot_14 = Spot.new(spot_details_14)
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgJlnoY767LEXifMvM1_4HKaWQ7WgWXFDeXQ&usqp=CAU')
+spot_14.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_14.save
 
 spot_details_15 = {
@@ -334,6 +384,8 @@ spot_details_15 = {
   user: user
 }
 spot_15 = Spot.new(spot_details_15)
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwzPvSd_6BZFwLMWkUP8Vuntlmf4E0HSE14g&usqp=CAU')
+spot_15.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_15.save
 
 spot_details_16 = {
@@ -351,6 +403,10 @@ spot_details_16 = {
   user: user
 }
 spot_16 = Spot.new(spot_details_16)
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjc4kBPgWMsL2mGXg4xZ_IteuuesB6_skyJw&usqp=CAU')
+spot_16.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYFw8U3Pxads3lXEeiLsv_6jx7Nbvj0y-ivw&usqp=CAU')
+spot_16.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_16.save
 
 spot_details_17 = {
@@ -370,13 +426,15 @@ spot_details_17 = {
   user: user
 }
 spot_17 = Spot.new(spot_details_17)
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4SqbsaD7Dd8fG_TEnuzfI9CJEEiqB3DsAJg&usqp=CAU')
+spot_17.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_17.save
 
 spot_details_18 = {
   name: "South Malé Atoll",
   latitude: 3.950019734301295,
   longitude: 73.4166683410952,
-  category: "Scubadiving, Snorkling",
+  category: "Scubadiving, Snorkeling",
   facility: "Accomodation",
   difficulty: "Advanced",
   description: "Cocoa Corner provides one of the best shark shows and advanced dives in the Maldives.
@@ -386,13 +444,15 @@ spot_details_18 = {
   user: user
 }
 spot_18 = Spot.new(spot_details_18)
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu9F9QBq9MgMgNiCW5-9wwSFBbXrTCgka9OA&usqp=CAU')
+spot_18.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_18.save
 
 spot_details_19 = {
   name: "Doctors Cave Reef",
   latitude: 18.48744924517681,
   longitude: -77.93111210555583,
-  category: "Snorkling",
+  category: "Snorkeling",
   facility: "Accomodation, Bar, Restaurant",
   difficulty: "Moderate",
   description: "Secrets Reef & Doctor’s Cave Reef- the two best BY FAR
@@ -402,13 +462,15 @@ spot_details_19 = {
   user: user
 }
 spot_19 = Spot.new(spot_details_19)
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO3kPExbwN-PFKLs1rcPSvSrzufB2tBUWRWg&usqp=CAU')
+spot_19.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_19.save
 
 spot_details_20 = {
-  name: "Bloddy Bay",
+  name: "Bloody Bay",
   latitude: 18.348078987081735,
   longitude: -78.33625990786027,
-  category: "Snorkling",
+  category: "Snorkeling",
   facility: "Accomodation, Bar, Restaurant, Supermarket",
   difficulty: "Beginner",
   description: "Swim out following the rocks to the point there is loads to see
@@ -419,6 +481,8 @@ spot_details_20 = {
   user: user
 }
 spot_20 = Spot.new(spot_details_20)
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHsJFmh-1igc6kfeNvNfngxLPRgHA8nuOc-w&usqp=CAU')
+spot_20.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_20.save
 
 
