@@ -4,6 +4,7 @@ import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
 
 // Connects to data-controller="map"
 export default class extends Controller {
+  static targets = ["coordinates", "maps"]
   static values = {
     apiKey: String,
     markers: Array
@@ -23,6 +24,28 @@ export default class extends Controller {
     // Add zoom and rotation controls to the map.
     this.map.addControl(new mapboxgl.NavigationControl());
     this.#geolocate()
+
+
+    this.map.on('contextmenu', function(e) {
+      let coordinates = e.lngLat
+      console.log(coordinates)
+      const url = `spots/new?lat=${e.lngLat.lat}&lng=${e.lngLat.lng}`
+      window.location.href = url;
+
+
+
+
+      // new mapboxgl.Popup()
+      //   .setLngLat(coordinates)
+      //   .setPopup(popup)
+      //   .addTo(this.map)
+// TODO : define URL
+      // URL = "http://localhost:3000/"
+      // fetch(URL, {headers: {"Accept": "text/plain"}})
+      // .then(response => response.text())
+      // .then((data) => { insertAdjacentHTML(data)})
+      // console.log(this.coordinatesTarget)
+      });
 
   }
   #geolocate() {
