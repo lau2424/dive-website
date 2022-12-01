@@ -20,10 +20,10 @@ export default class extends Controller {
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
     this.map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
-      mapboxgl: mapboxgl }))
+      mapboxgl: mapboxgl }), "bottom-right")
     // Add zoom and rotation controls to the map.
-    this.map.addControl(new mapboxgl.NavigationControl());
-    this.#geolocate()
+    this.map.addControl(new mapboxgl.NavigationControl(), "bottom-right");
+    this.#geolocate("bottom-right")
 
 
     this.map.on('contextmenu', function(e) {
@@ -58,9 +58,10 @@ export default class extends Controller {
       fitBoundsOptions: {
         zoom: 8,
       }
+
     });
     // Add the control to the map.
-    this.map.addControl(geolocate);
+    this.map.addControl(geolocate, "bottom-right");
     // Set an event listener that fires
     // when a geolocate event occurs.
     geolocate.on('geolocate', () => {

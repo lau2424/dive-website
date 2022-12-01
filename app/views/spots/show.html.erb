@@ -27,7 +27,9 @@ api = [ENV['API1'], ENV['API2'], ENV['API3'].sample %>
         <%= render "reviews/formreview", spot: @spot, review: @review %>
       <% else %>
         <%= link_to "Login to add review", new_user_session_path(@user) %>
+
       <% end %>
+
     <ul>
     <% @spot.reviews.each do |review| %>
       <li><%= review.content %> - <%= "⭐️" * review.rating %> - by <%= review.user.first_name %> <%= cl_image_tag review.photo.key, height: 150, width: 200, crop: :fill if review.photo.attached?  %></li>

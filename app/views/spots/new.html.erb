@@ -1,15 +1,17 @@
-<%= simple_form_for(@spot) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :longitude, input_html: {value: params["lng"]} %>
-  <%= f.input :latitude, input_html: {value: params["lat"]} %>
-  <%= f.input :facility %>
-  <%= f.label :category %>
-  <%= f.select(:category, ['Scuba diving', 'Snorkling'], {}, {:class => 'form-control'}) %>
-  <%= f.label :difficulty %>
-  <%= f.select(:difficulty, ['Beginner', 'Intermediate', 'Expert'], {}, {:class => 'form-control'}) %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <%= f.submit %>
-<% end %>
-
-
+<div class="d-contenaire">
+  <div class="d-box">
+    <%= simple_form_for(@spot) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :longitude, input_html: {value: params["lng"]} %>
+      <%= f.input :latitude, input_html: {value: params["lat"]} %>
+      <%= f.input :facility %>
+      <%= f.label :category %>
+      <%= f.select(:category, ['Scuba diving', 'Snorkling'], {}, {:class => 'form-control'}) %>
+      <%= f.label :difficulty %>
+      <%= f.select(:difficulty, ['Beginner', 'Intermediate', 'Expert'], {}, {:class => 'form-control'}) %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
