@@ -4,6 +4,7 @@ import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
 
 // Connects to data-controller="map"
 export default class extends Controller {
+  static targets = ["coordinates", "maps"]
   static values = {
     apiKey: String,
     markers: Array
@@ -31,6 +32,16 @@ export default class extends Controller {
       new mapboxgl.Marker()
         .setLngLat(coordinates)
         .addTo(this.map)
+// TODO : define URL
+URL = "http://localhost:3000/"
+      fetch(URL, {headers: {"Accept": "text/plain"}})
+      .then(response => response.text())
+      .then((data) => { insertAdjacentHTML(data)})
+      console.log(this.coordinatesTarget)
+
+
+
+
       });
 
   }
