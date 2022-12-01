@@ -4,6 +4,7 @@ import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
 
 // Connects to data-controller="map"
 export default class extends Controller {
+  static targets = ["coordinates", "maps"]
   static values = {
     apiKey: String,
     markers: Array
@@ -13,16 +14,38 @@ export default class extends Controller {
 
     this.map = new mapboxgl.Map({
       container: this.element,
-      style: "mapbox://styles/fabpsl/clb283avy004214lbcrmn9lgh",
+      style: "mapbox://styles/fabpsl/clb51dy34001715ru9iybl3dg",
       zoom: 13
     })
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
     this.map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
-      mapboxgl: mapboxgl }))
+      mapboxgl: mapboxgl }), "bottom-right")
     // Add zoom and rotation controls to the map.
-    this.map.addControl(new mapboxgl.NavigationControl());
-    this.#geolocate()
+    this.map.addControl(new mapboxgl.NavigationControl(), "bottom-right");
+    this.#geolocate("bottom-right")
+
+
+    this.map.on('contextmenu', function(e) {
+      let coordinates = e.lngLat
+      console.log(coordinates)
+      const url = `spots/new?lat=${e.lngLat.lat}&lng=${e.lngLat.lng}`
+      window.location.href = url;
+
+
+
+
+      // new mapboxgl.Popup()
+      //   .setLngLat(coordinates)
+      //   .setPopup(popup)
+      //   .addTo(this.map)
+// TODO : define URL
+      // URL = "http://localhost:3000/"
+      // fetch(URL, {headers: {"Accept": "text/plain"}})
+      // .then(response => response.text())
+      // .then((data) => { insertAdjacentHTML(data)})
+      // console.log(this.coordinatesTarget)
+      });
 
   }
   #geolocate() {
@@ -35,6 +58,7 @@ export default class extends Controller {
       fitBoundsOptions: {
         zoom: 8,
       }
+
     });
     // Add the control to the map.
     this.map.addControl(geolocate);
