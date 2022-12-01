@@ -1,6 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: rgba(255, 255, 255, 0.249);
+  position: relative;
+  z-index: 9999;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -26,4 +28,3 @@
     background-color: #BAD3F6;
   }
 }
-
