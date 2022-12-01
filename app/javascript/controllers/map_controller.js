@@ -61,7 +61,7 @@ export default class extends Controller {
 
     });
     // Add the control to the map.
-    this.map.addControl(geolocate);
+    this.map.addControl(geolocate, "bottom-right");
     // Set an event listener that fires
     // when a geolocate event occurs.
     geolocate.on('geolocate', () => {
