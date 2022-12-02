@@ -19,7 +19,8 @@ user_details = {
   email: "tiagoscmatos@hotmail.com",
   password: "123456",
   first_name: "Tiago",
-  last_name: "Matos"
+  last_name: "Matos",
+  #photo: 'https://divemagazine.com/wp-content/uploads/shutterstock_73058680.jpg'
 }
 user = User.new(user_details)
 user.save
