@@ -12,7 +12,6 @@ class SpotsController < ApplicationController
         image_url: helpers.asset_url(addapting_icon(spot))
       }
     end
-
   end
 
   def show
