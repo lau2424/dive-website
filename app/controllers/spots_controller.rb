@@ -1,7 +1,7 @@
 class SpotsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @spots = Spot.all
+    @spots = policy_scope(Spot)
 
     # The `geocoded` scope filters only flats with coordinates
     @markers = @spots.geocoded.map do |spot|
@@ -17,16 +17,19 @@ class SpotsController < ApplicationController
   def show
     @spot = Spot.find(params[:id])
     @review = Review.new
+    authorize @spot
   end
 
   def new
     @spot = Spot.new
+    authorize @spot
   end
 
   def create
     @spot = Spot.new(spot_params)
     @user = current_user
     @spot.user = @user
+    authorize @spot
     if @spot.save
       redirect_to spot_path(@spot)
     else
@@ -36,11 +39,13 @@ class SpotsController < ApplicationController
 
   def edit
     @spot = Spot.find(params[:id])
+    authorize @spot
   end
 
   def update
     @spot = Spot.find(params[:id])
     @spot.update(spot_params)
+    authorize @spot
     if @spot.update(spot_params)
       redirect_to spot_path(@spot)
     else
@@ -50,6 +55,7 @@ class SpotsController < ApplicationController
 
   def destroy
     @spot = Spot.find(params[:id])
+    authorize @spot
     @spot.destroy
     redirect_to root_path
   end

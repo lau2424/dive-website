@@ -52,6 +52,7 @@ gem "sassc-rails"
 gem "geocoder"
 gem "dotenv-rails", groups: [:development, :test]
 gem "cloudinary"
+gem "pundit"
 
 
 
