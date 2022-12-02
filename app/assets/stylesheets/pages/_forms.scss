@@ -1,6 +1,6 @@
 .d-contenaire {
-  justify-content: center;
-  align-items: center;
+  // justify-content: center;
+  // align-items: center;
 
   &::before {
     content: '';
@@ -29,7 +29,9 @@
   color: whitesmoke;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   // border: 1px solid #BAD3F6;
   padding: 10px;
   border-radius: 15px;
