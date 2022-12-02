@@ -30,7 +30,7 @@ api = [ENV['API1'], ENV['API2'], ENV['API3'].sample %>
         <% end %>
       <ul>
       <% @spot.reviews.each do |review| %>
-        <li><%= review.content %> - <%= "⭐️" * review.rating %> - by <%= review.user.first_name %> <%= cl_image_tag review.photo.key, height: 150, width: 200, crop: :fill if review.photo.attached?  %></li>
+        <li><i class="fa-solid fa-quote-left"></i><%= review.content %> - <%= "⭐️" * review.rating %> - by <%= review.user.first_name %> <i class="fa-solid fa-quote-right"></i> <%= cl_image_tag review.photo.key, height: 150, width: 200, crop: :fill if review.photo.attached?  %></li>
       <% end %>
     </div>
     <div class="links">
