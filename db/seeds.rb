@@ -370,13 +370,13 @@ spot_14.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_14.save
 
 spot_details_15 = {
-  name: "Ship Wreck MV Superior Producer",
+  name: "MVSuperior Producer",
   latitude: 12.10509306045822,
   longitude: -68.94417044247642,
   category: "Scuba Diving",
   facility: "Accomodation, Bar, Restaurant, Supermarket",
   difficulty: "Moderate",
-  description: "The Superior Producer is Curaçao’s iconic shipwreck and it is one of the most popular dive sites in Curaçao.
+  description: "The Ship Wreck MV Superior Producer is Curaçao’s iconic shipwreck and it is one of the most popular dive sites in Curaçao.
   This wreck diving site is rated as one of the top 5 dive sites in the Caribbean and certainly an essential Curaçao
   experience! Dive in with us now as we explore the history of this incredible shipwreck and how the
   Superior Producer met an untimely end.
