@@ -53,9 +53,14 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   list-style-type: none;
   padding-left: 0;
 }
+.review-form > ul > li {
+  font-style: italic;
+}
+
 
 @media screen and (max-width: 600px) {
   .spot-photos > img {
     width: 320px;
   }
-}
+
+
