@@ -9,7 +9,7 @@ class SpotsController < ApplicationController
         lat: spot.latitude,
         lng: spot.longitude,
         info_window: render_to_string(partial: "info_window", locals: { spot: spot, average_rating: average_rating(spot) }),
-        image_url: helpers.asset_url("markerdive.png")
+        image_url: helpers.asset_url(addapting_icon(spot))
       }
     end
 
@@ -61,6 +61,16 @@ class SpotsController < ApplicationController
     end
     unless spot.reviews.empty?
       @average.sum / @average.size
+    end
+  end
+
+  def addapting_icon(spot)
+    if spot.category == "Snorkeling"
+      "Snorkeling.png"
+    elsif spot.category == "Scuba Diving"
+      "markerdive.png"
+    elsif spot.category == "Scuba Diving & Snorkeling"
+      "Scubadiving&Snorkeling.png"
     end
   end
 
