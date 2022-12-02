@@ -1,6 +1,6 @@
 .d-contenaire {
-  justify-content: center;
-  align-items: center;
+  // justify-content: center;
+  // align-items: center;
 
   &::before {
     content: '';
@@ -24,14 +24,26 @@
 }
 
 .d-box {
-  background-color: white;
-  width: 600px;
-  border: 1px solid #BAD3F6;
+  // background-color: white;
+  backdrop-filter: blur(10px);
+  color: whitesmoke;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // border: 1px solid #BAD3F6;
   padding: 10px;
   border-radius: 15px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
-  box-shadow: 0 8px 16px 0 rgba(245, 243, 243, 0.447), 0 8px 16px 0 rgba(245, 243, 243, 0.447);
+  // box-shadow: 0 8px 16px 0 rgba(245, 243, 243, 0.447), 0 8px 16px 0 rgba(245, 243, 243, 0.447);
 
+}
+
+.form-control {
+  background-color: transparent;
+  color: white;
+  border-radius: 10px;
 }

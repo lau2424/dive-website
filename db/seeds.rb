@@ -19,7 +19,8 @@ user_details = {
   email: "tiagoscmatos@hotmail.com",
   password: "123456",
   first_name: "Tiago",
-  last_name: "Matos"
+  last_name: "Matos",
+  #photo: 'https://divemagazine.com/wp-content/uploads/shutterstock_73058680.jpg'
 }
 user = User.new(user_details)
 user.save
@@ -63,7 +64,7 @@ spot_details = {
   name: "SS Thistlegorm",
   latitude: 27.8137460146132,
   longitude: 33.92075717116466,
-  category: "Scubadiving",
+  category: "Scuba Diving",
   facility: "Boat tours to reach the site. Tours with meals included.",
   difficulty: "Advanced",
   description: "The best wreck dive in the world, the SS Thistlegorm lies in the northern section of the Red Sea.
@@ -88,7 +89,7 @@ spot_details_2 = {
   name: "Blue Corner",
   latitude: 7.101950899675428,
   longitude: 134.24192889731958,
-  category: "Scubadiving",
+  category: "Scuba Diving",
   facility: "Boat needed to reach site. Tours, from Palau main island, having food and renting equipment.",
   difficulty: "Moderate",
   description: "Blue Corner is a dive for the ages.
@@ -134,7 +135,7 @@ spot_details_4 = {
   name: "Cenote Angelita",
   latitude: 20.13760693546386,
   longitude: -87.57778441803842,
-  category: "Scubadiving",
+  category: "Scuba Diving",
   facility: "Accomodation, Restaurants",
   difficulty: "Advanced",
   description: "There are thousands of cenotes scattered throughout the Yucatan Peninsula of Mexico,
@@ -156,7 +157,7 @@ spot_details_5 = {
   name: "Silfra Fissure",
   latitude: 64.25689674203579,
   longitude: -21.116868402671393,
-  category: "Scubadiving, Snorkeling",
+  category: "Scuba Diving & Snorkeling",
   facility: "Accomodation 5km",
   difficulty: "Beginner",
   description: "Diving between continental plates may sound risky,
@@ -179,7 +180,7 @@ spot_details_6 = {
   name: "Sardine Run",
   latitude: -30.20582475232037,
   longitude: 30.803119239304994,
-  category: "Scubadiving",
+  category: "Scuba Diving",
   facility: "Accomodation, Restaurant, Bar, Supermarket",
   difficulty: "Beginner",
   description: "Certainly an adventurous dive,
@@ -202,7 +203,7 @@ spot_details_7 = {
   name: "Cape Kri",
   latitude: -0.556141417973152,
   longitude: 130.6905029261628,
-  category: "Scubadiving, Snorkeling",
+  category: "Scuba Diving & Snorkeling",
   facility: "Accomodation",
   difficulty: "Moderate - Advanced",
   description: "Raja Ampat seems to be on every diver’s bucket list these days.
@@ -290,7 +291,7 @@ spot_details_11 = {
   name: "Jardines de la Reina",
   latitude: 20.833974478268892,
   longitude: -78.91683840092857,
-  category: "Scubadiving",
+  category: "Scuba Diving",
   facility: "Boat Tours with Meals",
   difficulty: "Moderate to Advanced",
   description: "Jardines de la Reina can only be visited by liveaboard.
@@ -315,7 +316,7 @@ spot_details_12 = {
   name: "Emergence du Ressel",
   latitude: 44.56216707251125,
   longitude: 1.7720069292178797,
-  category: "Scubadiving",
+  category: "Scuba Diving",
   facility: "Accomodation",
   difficulty: "Beginner to Advanced",
   description: "Located in the center of Quercy / Lot,
@@ -336,7 +337,7 @@ spot_details_13 = {
   name: "Darwin’s Arch",
   latitude: 1.6737701756065093,
   longitude: -91.99036612693386,
-  category: "Scubadiving",
+  category: "Scuba Diving",
   facility: "Boat tours",
   difficulty: "Advanced",
   description: "Accessible by boat from tours on the Galapagos Islands.
@@ -355,7 +356,7 @@ spot_details_14 = {
   name: "Race Rocks",
   latitude: 48.315490821262294,
   longitude: -124.069613561219,
-  category: "Scubadiving",
+  category: "Scuba Diving",
   facility: "Accomodation, Tours",
   difficulty: "Moderate",
   description: "Fast currents rush past this rocky inlet, but if you time it right,
@@ -372,7 +373,7 @@ spot_details_15 = {
   name: "Ship Wreck MV Superior Producer",
   latitude: 12.10509306045822,
   longitude: -68.94417044247642,
-  category: "Scubadiving",
+  category: "Scuba Diving",
   facility: "Accomodation, Bar, Restaurant, Supermarket",
   difficulty: "Moderate",
   description: "The Superior Producer is Curaçao’s iconic shipwreck and it is one of the most popular dive sites in Curaçao.
@@ -392,7 +393,7 @@ spot_details_16 = {
   name: "Banana Reef",
   latitude: 4.2341099395512645,
   longitude: 73.53384465752359,
-  category: "Scubadiving",
+  category: "Scuba Diving",
   facility: "Accomodation, Restaurant, Airport, Supermarket",
   difficulty: "Beginner to Advanced",
   description: "Banana Reef was the first dive site discovered in the Maldives,
@@ -413,7 +414,7 @@ spot_details_17 = {
   name: "Rasfari",
   latitude: 4.394744016521531,
   longitude: 73.35188481575527,
-  category: "Scubadiving",
+  category: "Scuba Diving",
   facility: "Accomodation",
   difficulty: "Beginner to Advanced",
   description: "Small Island accessible only by boat.
@@ -434,7 +435,7 @@ spot_details_18 = {
   name: "South Malé Atoll",
   latitude: 3.950019734301295,
   longitude: 73.4166683410952,
-  category: "Scubadiving, Snorkeling",
+  category: "Scuba Diving & Snorkeling",
   facility: "Accomodation",
   difficulty: "Advanced",
   description: "Cocoa Corner provides one of the best shark shows and advanced dives in the Maldives.
@@ -510,6 +511,25 @@ review_content_1 = {
 review_1 = Review.new(review_content_1)
 review_1.save
 
+review_content_7 = {
+  content: "One of best dive sites in Raja Ampat with colorful coral reef and marine life",
+  rating: 5,
+  user: user_reviewer_1,
+  spot: spot_7
+}
+review_7 = Review.new(review_content_7)
+review_7.save
+
+review_content_8 = {
+  content: "Snorkeled in the dark, the experience was unique to say the least.
+  Cold but the small bio-luminescent planktons were definitely a new experience.
+  Recommended :)",
+  rating: 4,
+  user: user_reviewer_1,
+  spot: spot_8
+}
+review_8 = Review.new(review_content_8)
+review_8.save
 
 user_reviewer_2 = {
   email: "Guilhermp.p@hotmail.com",
@@ -528,6 +548,29 @@ review_content_2 = {
 }
 review_2 = Review.new(review_content_2)
 review_2.save
+
+review_content_9 = {
+  content: "As a first time snorkeller the fish and the clarity of the water was excellent.
+  However I was disappointed to find the coral itself had very little colour.
+  I thought it would have color but it was nearly all brown or white.
+  I spoke to some people who had been to the great barrier reef and they said the snorkelling was better at Mana.
+  There was a large variety of fish and turtles and reef sharks.
+  I certainly enjoyed it but weather it lives up to your expectations remains to be seen.",
+  rating: 4,
+  user: user_reviewer_2,
+  spot: spot_9
+}
+review_9 = Review.new(review_content_9)
+review_9.save
+
+review_content_10 = {
+  content: "We saw underwater statues, turtles, stingrays and an assortment of beautiful fish.",
+  rating: 4,
+  user: user_reviewer_2,
+  spot: spot_10
+}
+review_10 = Review.new(review_content_10)
+review_10.save
 
 
 user_reviewer_3 = {
@@ -548,6 +591,15 @@ review_content_3 = {
 review_3 = Review.new(review_content_3)
 review_3.save
 
+review_content_11 = {
+  content: " Best shark diving ever! close encounters with swarms of caribbean reef
+  and silky sharks occsional scallop hammerheads and whale sharks in season",
+  rating: 5,
+  user: user_reviewer_3,
+  spot: spot_11
+}
+review_11 = Review.new(review_content_11)
+review_11.save
 
 user_reviewer_4 = {
   email: "jet@hotmail.com",
@@ -571,6 +623,15 @@ review_content_4 = {
 }
 review_4 = Review.new(review_content_4)
 review_4.save
+
+review_content_12 = {
+  content: "Excellent cave for cave diving. But watch out for any outflow. Can be quite strong.",
+  rating: 4,
+  user: user_reviewer_4,
+  spot: spot_12
+}
+review_12 = Review.new(review_content_12)
+review_12.save
 
 
 user_reviewer_5 = {
@@ -596,6 +657,16 @@ review_content_5 = {
 review_5 = Review.new(review_content_5)
 review_5.save
 
+review_content_13 = {
+  content: "Diving in the Galapagos is difficult.
+  The water is cold, the currents are strong and the visibility can be inconsistent.",
+  rating: 3,
+  user: user_reviewer_5,
+  spot: spot_13
+}
+review_13 = Review.new(review_content_13)
+review_13.save
+
 user_reviewer_6 = {
   email: "vorismelb@hotmail.com",
   password: "123456",
@@ -614,3 +685,76 @@ review_content_6 = {
 }
 review_6 = Review.new(review_content_6)
 review_6.save
+
+review_content_14 = {
+  content: "Nice but can become dangerous.
+  A sealion bite can be very toxic, and they have been known to ram into divers ,
+  especially if a diver enters a zone where they have been actively  hunting for fish.",
+  rating: 3,
+  user: user_reviewer_5,
+  spot: spot_14
+}
+review_14 = Review.new(review_content_14)
+review_14.save
+
+review_content_15 = {
+  content: "Super cool shipwreck dive. We did this dive in August of 2022.
+  It was the first time that we had a chance to do it. We did it from a dive boat using Nitrox.
+  I was able to penetrate the wreck and see the inside.
+  Dive lights are a must and you need to conserve air and be aware of your no deco time limits and
+  come up very slowly after finishing the shipwreck. Very fun experience!.",
+  rating: 5,
+  user: user_reviewer_5,
+  spot: spot_15
+}
+review_15 = Review.new(review_content_15)
+review_15.save
+
+review_content_16 = {
+  content: "Banana Reef is the dive site that put the Maldives on the map.
+  Now protected by a marine area, this reef was the country’s first internationally famous site (for good reason).
+  It boasts a bit of everything from colorful corals to caves and overhangs.
+  Sharks and grouper as well as reef fish like Napoleon wrasse and jackfish congregate in these crystal clear water.
+  The reef is suitable for beginners, and even snorkelers can enjoy the shallow sections. Good for Beginner",
+  rating: 4,
+  user: user_reviewer_5,
+  spot: spot_16
+}
+review_16 = Review.new(review_content_16)
+review_16.save
+
+review_content_17 = {
+  content: "Cool experience, not the best.",
+  rating: 2,
+  user: user_reviewer_3,
+  spot: spot_17
+}
+review_17 = Review.new(review_content_17)
+review_17.save
+
+review_content_18 = {
+  content: "One of the best spots ! Although expensive to get there.",
+  rating: 3,
+  user: user_reviewer_3,
+  spot: spot_18
+}
+review_18 = Review.new(review_content_18)
+review_18.save
+
+review_content_19 = {
+  content: "Very pleasant beach for snorkeling. Suitable for kids as well!",
+  rating: 4,
+  user: user_reviewer_4,
+  spot: spot_19
+}
+review_19 = Review.new(review_content_19)
+review_19.save
+
+review_content_20 = {
+  content: "Decent place not the best however, quite relaxing!",
+  rating: 4,
+  user: user_reviewer_5,
+  spot: spot_20
+}
+review_20 = Review.new(review_content_20)
+review_20.save

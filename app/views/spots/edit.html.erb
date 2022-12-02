@@ -7,10 +7,10 @@
       <%= f.input :latitude %>
       <%= f.input :facility %>
       <%= f.label :category %>
-      <%= f.select(:category, ['Scuba diving', 'Snorkling'], {}, {:class => 'form-control'}) %>
+      <%= f.select(:category, ['Scuba diving', 'Snorkeling', 'Scuba Diving & Snorkeling'], {}, {:class => 'form-control'}) %>
       <%= f.label :difficulty %>
       <%= f.select(:difficulty, ['Beginner', 'Intermediate', 'Expert'], {}, {:class => 'form-control'}) %>
-      <%= f.submit %>
+      <%= f.submit "Confirm", class:"btn-gps" %>
     <% end %>
   </div>
 </div>
