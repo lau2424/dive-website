@@ -18,6 +18,7 @@ export default class extends Controller {
       center: [50.85, 4.35],
       zoom: 10
     })
+
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
     this.map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
@@ -44,9 +45,6 @@ export default class extends Controller {
       // element.addEventListener('touchmove', cancel);
     }
 
-
-
-
     onLongPress(this.element, () => {
       this.map.on('click', function(e) {
       let coordinates = e.lngLat
@@ -61,6 +59,8 @@ export default class extends Controller {
   const url = `spots/new?lat=${e.lngLat.lat}&lng=${e.lngLat.lng}`
   window.location.href = url;
   })
+
+
 
 }
   #geolocate() {
