@@ -13,7 +13,7 @@ export default class extends Controller {
   }
 
   fetchWeatherByCoordinates() {
-      const url =`http://api.openweathermap.org/data/2.5/weather?lat=${this.latitudeTarget.textContent}&lon=${this.longitudeTarget.textContent}&appid=${this.apiKey}&units=metric`
+      const url =`https://api.openweathermap.org/data/2.5/weather?lat=${this.latitudeTarget.textContent}&lon=${this.longitudeTarget.textContent}&appid=${this.apiKey}&units=metric`
       fetch(url)
         .then(response => response.json())
         .then(data => this.displayWeather(data))
@@ -26,4 +26,5 @@ export default class extends Controller {
     this.descriptionTarget.innerText = data.weather[0].description
 
   }
+
 }
