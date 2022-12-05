@@ -23,21 +23,33 @@ api = [ENV['API1'], ENV['API2'], ENV['API3'].sample %>
       <div data-controller="weatherforecast" class="weatherforecast">
         <p hidden data-weatherforecast-target="latitude"><%= @spot.latitude %></p>
         <p hidden data-weatherforecast-target="longitude"><%= @spot.longitude %></p>
-        <p data-weatherforecast-target="d1"></p>
-        <img src="" id="weather-icon" alt="Weather Icon" data-weatherforecast-target="icon1">
-        <p data-weatherforecast-target="td1"></p>
-        <p data-weatherforecast-target="d2"></p>
-        <img src="" id="weather-icon" alt="Weather Icon" data-weatherforecast-target="icon2">
-        <p data-weatherforecast-target="td2"></p>
-        <p data-weatherforecast-target="d3"></p>
-        <img src="" id="weather-icon" alt="Weather Icon" data-weatherforecast-target="icon3">
-        <p data-weatherforecast-target="td3"></p>
-        <p data-weatherforecast-target="d4"></p>
-        <img src="" id="weather-icon" alt="Weather Icon" data-weatherforecast-target="icon4">
-        <p data-weatherforecast-target="td4"></p>
-        <p data-weatherforecast-target="d5"></p>
-        <img src="" id="weather-icon" alt="Weather Icon" data-weatherforecast-target="icon5">
-        <p data-weatherforecast-target="td5"></p>
+        <div class="weather-icons">
+          <div class="weather-icon">
+            <p data-weatherforecast-target="d1"></p>
+            <img src="" id="weather-icon" alt="Weather Icon" data-weatherforecast-target="icon1">
+            <p data-weatherforecast-target="td1"></p>
+          </div>
+          <div class="weather-icon">
+            <p data-weatherforecast-target="d2"></p>
+            <img src="" id="weather-icon" alt="Weather Icon" data-weatherforecast-target="icon2">
+            <p data-weatherforecast-target="td2"></p>
+          </div>
+          <div class="weather-icon">
+            <p data-weatherforecast-target="d3"></p>
+            <img src="" id="weather-icon" alt="Weather Icon" data-weatherforecast-target="icon3">
+            <p data-weatherforecast-target="td3"></p>
+          </div>
+          <div class="weather-icon">
+            <p data-weatherforecast-target="d4"></p>
+            <img src="" id="weather-icon" alt="Weather Icon" data-weatherforecast-target="icon4">
+            <p data-weatherforecast-target="td4"></p>
+          </div>
+          <div class="weather-icon">
+            <p data-weatherforecast-target="d5"></p>
+            <img src="" id="weather-icon" alt="Weather Icon" data-weatherforecast-target="icon5">
+            <p data-weatherforecast-target="td5"></p>
+          </div>
+        </div>
       </div>
       <div class="review-form">
         <ul>

@@ -49,15 +49,40 @@ body {
 -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
+
+.review-form h2 {
+  margin-top: 20px;
+}
+
 .review-form > ul {
   list-style-type: none;
   padding-left: 0;
 }
 .review-form > ul > li {
   font-style: italic;
+  margin: 10px 0;
 }
 
+.weatherforecast {
+  width: 100%;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  margin-bottom: 20px;
+}
 
+.weather-icons {
+  width: 100%;
+  display: flex;
+  gap: 5%;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.weather-icon {
+  padding: 0 5px;
+}
 
 
 @media screen and (max-width: 600px) {
