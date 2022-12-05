@@ -18,6 +18,9 @@ api = [ENV['API1'], ENV['API2'], ENV['API3'].sample %>
         <a href="https://maps.google.com/?q=<%= @spot.latitude %>,<%= @spot.longitude %>" target="_blank" class="btn-gps" >Take me there</a> <!--https://maps.google.com/?q=<lat>,<lng> -->
         <p class="spot-addedby"><strong>Added by: </strong><%= @spot.user.first_name %></p>
 
+        <%= @spot.facility %>
+        <p><%= @spot.difficulty %> </p>
+
       </div>
     </div>
 
@@ -33,6 +36,7 @@ api = [ENV['API1'], ENV['API2'], ENV['API3'].sample %>
         <li><i class="fa-solid fa-quote-left"></i> <%= review.content %> - <%= "⭐️" * review.rating %> - by <%= review.user.first_name %>    <i class="fa-solid fa-quote-right"></i> <%= cl_image_tag review.photo.key, height: 150, width: 200, crop: :fill if review.photo.attached?  %></li>
       <% end %>
     </div>
+
     <div class="links">
       <%= link_to "Back to list", root_path, class:"btn-gps" %>
       <% if policy(@spot).edit? %>
