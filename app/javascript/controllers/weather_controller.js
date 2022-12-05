@@ -26,4 +26,5 @@ export default class extends Controller {
     this.descriptionTarget.innerText = data.weather[0].description
 
   }
+
 }

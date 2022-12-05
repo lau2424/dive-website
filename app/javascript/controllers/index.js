@@ -15,3 +15,6 @@ application.register("map", MapController)
 
 import WeatherController from "./weather_controller"
 application.register("weather", WeatherController)
+
+import WeatherforecastController from "./weatherforecast_controller"
+application.register("weatherforecast", WeatherforecastController)

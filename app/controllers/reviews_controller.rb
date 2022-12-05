@@ -10,6 +10,7 @@ class ReviewsController < ApplicationController
     @spot = Spot.find(params[:spot_id])
     @user = current_user
     @review = Review.new(review_params)
+    authorize @review
     @review.user = @user
     @review.spot = @spot
     if @review.save
@@ -21,6 +22,7 @@ class ReviewsController < ApplicationController
 
   def destroy
     @review = Review.find(params[:id])
+    authorize @review
     @review.destroy
     redirect_to spot_path(@review.spot), status: :see_other
   end

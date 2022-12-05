@@ -22,6 +22,47 @@ api = [ENV['API1'], ENV['API2'], ENV['API3'].sample %>
         <p><%= @spot.difficulty %> </p>
         </div>
       </div>
+
+      <h1 class="spot-ttl" ><%= @spot.name %></h1>
+      <div class="spot-content">
+        <p class="spot-description"><strong>Description:</strong> <%= @spot.description %></p>
+        <!--<p class="spot-coordinates"><strong>Coordinates: </strong><%= @spot.latitude %> <%= @spot.longitude %></p>-->
+        <a href="https://maps.google.com/?q=<%= @spot.latitude %>,<%= @spot.longitude %>" target="_blank" class="btn-gps" >Take me there</a> <!--https://maps.google.com/?q=<lat>,<lng> -->
+        <p class="spot-addedby"><strong>Added by: </strong><%= @spot.user.first_name %></p>
+      </div>
+    </div>
+
+    <div data-controller="weatherforecast" class="">
+      <p hidden data-weatherforecast-target="latitude"><%= @spot.latitude %></p>
+      <p hidden data-weatherforecast-target="longitude"><%= @spot.longitude %></p>
+
+      <p data-weatherforecast-target="d1"></p>
+      <img src="" id="weather-icon" alt="Weather Icon" data-weatherforecast-target="icon1">
+      <p data-weatherforecast-target="td1"></p>
+
+      <p data-weatherforecast-target="d2"></p>
+      <img src="" id="weather-icon" alt="Weather Icon" data-weatherforecast-target="icon2">
+      <p data-weatherforecast-target="td2"></p>
+
+      <p data-weatherforecast-target="d3"></p>
+      <img src="" id="weather-icon" alt="Weather Icon" data-weatherforecast-target="icon3">
+      <p data-weatherforecast-target="td3"></p>
+
+      <p data-weatherforecast-target="d4"></p>
+      <img src="" id="weather-icon" alt="Weather Icon" data-weatherforecast-target="icon4">
+      <p data-weatherforecast-target="td4"></p>
+
+      <p data-weatherforecast-target="d5"></p>
+      <img src="" id="weather-icon" alt="Weather Icon" data-weatherforecast-target="icon5">
+      <p data-weatherforecast-target="td5"></p>
+    </div>
+
+    <div class="review-form">
+      <% if user_signed_in? %>
+          <%= render "reviews/formreview", spot: @spot, review: @review %>
+        <% else %>
+          <%= link_to "Login to add review", new_user_session_path(@user) %>
+
       <div class="review-form">
         <ul>
         <% @spot.reviews.each do |review| %>
@@ -38,6 +79,7 @@ api = [ENV['API1'], ENV['API2'], ENV['API3'].sample %>
         <%= link_to "Back to list", root_path, class:"btn-gps" %>
         <% if policy(@spot).edit? %>
           <%= link_to "Edit this spot", edit_spot_path(@spot), class:"btn-gps" %>
+
         <% end %>
         <%= link_to "Delete this spot", destroy_spot_path(@spot), data: {turbo_method: :delete, turbo_confirm: "You are about to delete this spot, are you sure?"} , class:"btn-gps" if policy(@spot).destroy? %>
       </div>

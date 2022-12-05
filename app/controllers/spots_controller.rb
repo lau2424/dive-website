@@ -18,6 +18,7 @@ class SpotsController < ApplicationController
     @spot = Spot.find(params[:id])
     @review = Review.new
     authorize @spot
+    @reviews = policy_scope(Review)
   end
 
   def new
