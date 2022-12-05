@@ -25,7 +25,6 @@
 
 .d-box {
   // background-color: white;
-  backdrop-filter: blur(10px);
   color: whitesmoke;
   display: flex;
   flex-wrap: wrap;
@@ -53,4 +52,11 @@
 }
 .spot_latitude .form-label {
   display: none;
+}
+
+.bgblur {
+  margin: auto;
+  border-radius: 10px;
+  max-width: 900px;
+  backdrop-filter: blur(10px);
 }
