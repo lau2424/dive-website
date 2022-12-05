@@ -23,15 +23,16 @@ api = [ENV['API1'], ENV['API2'], ENV['API3'].sample %>
 
 
     <div class="review-form">
+      <ul>
+      <% @spot.reviews.each do |review| %>
+        <li><i class="fa-solid fa-quote-left"></i> <%= review.content %> - <%= "⭐️" * review.rating %> - by <%= review.user.first_name %>    <i class="fa-solid fa-quote-right"></i> <%= cl_image_tag review.photo.key, height: 150, width: 200, crop: :fill if review.photo.attached?  %></li>
+      <% end %>
+      </ul>
       <% if user_signed_in? %>
           <%= render "reviews/formreview", spot: @spot, review: @review %>
         <% else %>
           <%= link_to "Login to add review", new_user_session_path(@user) %>
         <% end %>
-      <ul>
-      <% @spot.reviews.each do |review| %>
-        <li><i class="fa-solid fa-quote-left"></i> <%= review.content %> - <%= "⭐️" * review.rating %> - by <%= review.user.first_name %>    <i class="fa-solid fa-quote-right"></i> <%= cl_image_tag review.photo.key, height: 150, width: 200, crop: :fill if review.photo.attached?  %></li>
-      <% end %>
     </div>
     <div class="links">
       <%= link_to "Back to list", root_path, class:"btn-gps" %>
