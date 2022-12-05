@@ -26,13 +26,33 @@ export default class extends Controller {
     this.map.addControl(new mapboxgl.NavigationControl(), "bottom-right");
     this.#geolocate("bottom-right")
 
+    function onLongPress(element, callback) {
+      let timer;
 
-    this.map.on('contextmenu', function(e) {
+      element.addEventListener('touchstart', () => {
+        timer = setTimeout(() => {
+          timer = null;
+          callback();
+        }, 300);
+      });
+
+      function cancel() {
+        clearTimeout(timer);
+      }
+
+      element.addEventListener('touchend', cancel);
+      // element.addEventListener('touchmove', cancel);
+    }
+
+
+
+    onLongPress(this.element, () => {
+    this.map.on('click', function(e) {
       let coordinates = e.lngLat
       console.log(coordinates)
       const url = `spots/new?lat=${e.lngLat.lat}&lng=${e.lngLat.lng}`
       window.location.href = url;
-
+    });
 
 
 
