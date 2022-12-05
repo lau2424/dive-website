@@ -99,3 +99,54 @@ a {
   padding: 0px;
   position: absolute !important
 }
+
+.mapboxgl-ctrl-attrib-inner {
+  display:none;
+}
+
+
+.icon-subs {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding: 10px 5px;
+  margin: 10px 0;
+  gap: 5px;
+  color: white;
+  }
+
+  .icon-sub {
+    background-color: rgba(172, 163, 163, 0.384);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .icon-subs img {
+    display: flex;
+    align-items: flex-end;
+    width: 50px;
+  }
+
+  .icon-subs p{
+    font-size: 10px;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 600px) {
+    .icon-subs {
+      flex-direction: row;
+      justify-content: flex-start;
+      bottom: 90px;
+    }
+
+  }
+
+.mapboxgl-ctrl-bottom-left {
+  display: none;
+}
+
