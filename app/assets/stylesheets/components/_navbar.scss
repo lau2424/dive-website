@@ -18,6 +18,11 @@
 
 }
 
+.navbar-nav {
+  flex-grow: 1;
+    justify-content: flex-end;
+}
+
 .btn-add {
   background: #bad3f680;
   color: rgb(255, 255, 255);
@@ -26,5 +31,24 @@
 
   &:hover {
     background-color: #BAD3F6;
+  }
+}
+
+.add-spot, .d-title, .collapse {
+  flex-grow: 1 !important;
+  flex-basis: 0 !important;
+}
+
+.add-spot {
+  display: flex;
+  justify-content: center;
+}
+
+.d-title {
+  display: flex;
+  align-items: flex-end;
+
+  h3 {
+    color: white;
   }
 }
