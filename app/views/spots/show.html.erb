@@ -18,6 +18,8 @@ api = [ENV['API1'], ENV['API2'], ENV['API3'].sample %>
           <!--<p class="spot-coordinates"><strong>Coordinates: </strong><%= @spot.latitude %> <%= @spot.longitude %></p>-->
           <a href="https://maps.google.com/?q=<%= @spot.latitude %>,<%= @spot.longitude %>" target="_blank" class="btn-gps" >Take me there</a> <!--https://maps.google.com/?q=<lat>,<lng> -->
           <p class="spot-addedby"><strong>Added by: </strong><%= @spot.user.first_name %></p>
+          <%= @spot.facility %>
+        <p><%= @spot.difficulty %> </p>
         </div>
       </div>
       <div class="review-form">
@@ -42,3 +44,4 @@ api = [ENV['API1'], ENV['API2'], ENV['API3'].sample %>
     </div>
   </div>
 </div>
+
