@@ -65,8 +65,8 @@ spot_details = {
   latitude: 27.8137460146132,
   longitude: 33.92075717116466,
   category: "Scuba Diving",
-  facility: "Boat tours to reach the site. Tours with meals included.",
-  difficulty: "Advanced",
+  facility: ["Restaurant", "Toilet"],
+    difficulty: "Advanced",
   description: "The best wreck dive in the world, the SS Thistlegorm lies in the northern section of the Red Sea.
 
   As a popular day trip and liveaboard stop, it’s easily accessible from Sharm El-Sheikh.
@@ -90,7 +90,7 @@ spot_details_2 = {
   latitude: 7.101950899675428,
   longitude: 134.24192889731958,
   category: "Scuba Diving",
-  facility: "Boat needed to reach site. Tours, from Palau main island, having food and renting equipment.",
+  facility: ["Restaurant", "Toilet"],
   difficulty: "Moderate",
   description: "Blue Corner is a dive for the ages.
   It consists of a reef-covered wall that runs along the side of Ngemelis Island in Palau.
@@ -115,7 +115,7 @@ spot_details_3 = {
   latitude: 19.560126941809703,
   longitude: -155.96496707376184,
   category: "Snorkeling",
-  facility: "Farmers market, Lounge Bar, Resorts and Hotels",
+  facility: ["Restaurant", "Shower"],
   difficulty: "Beginner",
   description: "Certainly one of the most unique night dives, the Manta Night Dive is a ballet for manta rays.
   Just off the coast of Kona is an artificially illuminated area where divers descend to the sandy observation areas.
@@ -136,7 +136,7 @@ spot_details_4 = {
   latitude: 20.13760693546386,
   longitude: -87.57778441803842,
   category: "Scuba Diving",
-  facility: "Accomodation, Restaurants",
+  facility: ["Restaurant"],
   difficulty: "Advanced",
   description: "There are thousands of cenotes scattered throughout the Yucatan Peninsula of Mexico,
   and many of them could easily find a spot on this list.
@@ -158,7 +158,7 @@ spot_details_5 = {
   latitude: 64.25689674203579,
   longitude: -21.116868402671393,
   category: "Scuba Diving & Snorkeling",
-  facility: "Accomodation 5km",
+  facility: ["Restaurant", "Accomodation"],
   difficulty: "Beginner",
   description: "Diving between continental plates may sound risky,
   but scuba divers flock to Silfra Fissure year-round for the pleasure.
@@ -181,7 +181,7 @@ spot_details_6 = {
   latitude: -30.20582475232037,
   longitude: 30.803119239304994,
   category: "Scuba Diving",
-  facility: "Accomodation, Restaurant, Bar, Supermarket",
+  facility: [],
   difficulty: "Beginner",
   description: "Certainly an adventurous dive,
   the sardine run attracts pelagic-loving scuba divers to South Africa on an annual basis.
@@ -204,7 +204,7 @@ spot_details_7 = {
   latitude: -0.556141417973152,
   longitude: 130.6905029261628,
   category: "Scuba Diving & Snorkeling",
-  facility: "Accomodation",
+  facility: ["Restaurant", "Accomodation"],
   difficulty: "Moderate - Advanced",
   description: "Raja Ampat seems to be on every diver’s bucket list these days.
   There is good reason for it, and Cape Kri is one of the dive sites that put this region on the map.
@@ -226,7 +226,7 @@ spot_details_8 = {
   latitude: 6.489452933250682,
   longitude: 99.30487531289059,
   category: "Snorkeling",
-  facility: "Accomodation, Bar, Restaurant, Supermarket",
+  facility: ["Restaurant", "Accomodation"],
   difficulty: "beginner",
   description: "Koh Lipe is a tiny paradise island in the southernmost part of Thailand,
   not far from the Malaysian border.
@@ -248,7 +248,7 @@ spot_details_9 = {
   latitude: -17.672344424863915,
   longitude: 177.09859956806864,
   category: "Snorkeling",
-  facility: "Accomodation, Airport",
+  facility: ["Restaurant", "Accomodation"],
   difficulty: "Beginner",
   description: "Great Snorkeling in a couple of different locations.
   With shallow tidal reefs, these locations had in common ease of access,
@@ -270,7 +270,7 @@ spot_details_10 = {
   latitude: -17.531818677178045,
   longitude: -149.8270785761602,
   category: "Snorkeling",
-  facility: "Accomodation, Restaurant, Airport, Hospital, Supermarket",
+  facility: ["Restaurant", "Accomodation"],
   difficulty: "Beginners",
   description: "As one of the most underrated islands found in French Polynesia,
   Moorea offers a spectacular array of family-friendly snorkeling opportunities.
@@ -292,7 +292,7 @@ spot_details_11 = {
   latitude: 20.833974478268892,
   longitude: -78.91683840092857,
   category: "Scuba Diving",
-  facility: "Boat Tours with Meals",
+  facility: ["Restaurant", "Accomodation"],
   difficulty: "Moderate to Advanced",
   description: "Jardines de la Reina can only be visited by liveaboard.
   Cuba’s Jardines de la Reina (Garden of the Queens) Marine Park
@@ -317,7 +317,7 @@ spot_details_12 = {
   latitude: 44.56216707251125,
   longitude: 1.7720069292178797,
   category: "Scuba Diving",
-  facility: "Accomodation",
+  facility: ["Restaurant", "Accomodation"],
   difficulty: "Beginner to Advanced",
   description: "Located in the center of Quercy / Lot,
   the number one cave  diving destination in Europe (and the 3rd in the world),
@@ -338,7 +338,7 @@ spot_details_13 = {
   latitude: 1.6737701756065093,
   longitude: -91.99036612693386,
   category: "Scuba Diving",
-  facility: "Boat tours",
+  facility: ["Restaurant", "Accomodation"],
   difficulty: "Advanced",
   description: "Accessible by boat from tours on the Galapagos Islands.
   This stone arch sits atop an underwater plateau known as the Theater,
@@ -357,7 +357,7 @@ spot_details_14 = {
   latitude: 48.315490821262294,
   longitude: -124.069613561219,
   category: "Scuba Diving",
-  facility: "Accomodation, Tours",
+  facility: ["Restaurant", "Accomodation"],
   difficulty: "Moderate",
   description: "Fast currents rush past this rocky inlet, but if you time it right,
    you can linger at this wall covered in strawberry anemones, white plumrose anemones and more.
@@ -374,7 +374,7 @@ spot_details_15 = {
   latitude: 12.10509306045822,
   longitude: -68.94417044247642,
   category: "Scuba Diving",
-  facility: "Accomodation, Bar, Restaurant, Supermarket",
+  facility: ["Restaurant", "Accomodation"],
   difficulty: "Moderate",
   description: "The Ship Wreck MV Superior Producer is Curaçao’s iconic shipwreck and it is one of the most popular dive sites in Curaçao.
   This wreck diving site is rated as one of the top 5 dive sites in the Caribbean and certainly an essential Curaçao
@@ -394,7 +394,7 @@ spot_details_16 = {
   latitude: 4.2341099395512645,
   longitude: 73.53384465752359,
   category: "Scuba Diving",
-  facility: "Accomodation, Restaurant, Airport, Supermarket",
+  facility: ["Restaurant", "Accomodation"],
   difficulty: "Beginner to Advanced",
   description: "Banana Reef was the first dive site discovered in the Maldives,
   and because of its exquisite ocean life and popularity, it is now a protected marine area.
@@ -415,7 +415,7 @@ spot_details_17 = {
   latitude: 4.394744016521531,
   longitude: 73.35188481575527,
   category: "Scuba Diving",
-  facility: "Accomodation",
+  facility: ["Restaurant", "Accomodation"],
   difficulty: "Beginner to Advanced",
   description: "Small Island accessible only by boat.
   Rasfari is a spectacular medley of marine wildlife including grey reef sharks,
@@ -436,7 +436,7 @@ spot_details_18 = {
   latitude: 3.950019734301295,
   longitude: 73.4166683410952,
   category: "Scuba Diving & Snorkeling",
-  facility: "Accomodation",
+  facility: ["Restaurant", "Accomodation"],
   difficulty: "Advanced",
   description: "Cocoa Corner provides one of the best shark shows and advanced dives in the Maldives.
   With luck, you will be greeted by scores of grey reef sharks,
@@ -454,7 +454,7 @@ spot_details_19 = {
   latitude: 18.48744924517681,
   longitude: -77.93111210555583,
   category: "Snorkeling",
-  facility: "Accomodation, Bar, Restaurant",
+  facility: ["Restaurant", "Accomodation"],
   difficulty: "Moderate",
   description: "Secrets Reef & Doctor’s Cave Reef- the two best BY FAR
   Secrets Reef snorkeling daily on site-Difficult Access, no public entry, so stay on site.
@@ -472,7 +472,7 @@ spot_details_20 = {
   latitude: 18.348078987081735,
   longitude: -78.33625990786027,
   category: "Snorkeling",
-  facility: "Accomodation, Bar, Restaurant, Supermarket",
+  facility: ["Restaurant", "Accomodation"],
   difficulty: "Beginner",
   description: "Swim out following the rocks to the point there is loads to see
   (right hand side of the beach looking out to see).

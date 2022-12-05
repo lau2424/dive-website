@@ -4,13 +4,25 @@ https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid={api}
 api = [ENV['API1'], ENV['API2'], ENV['API3'].sample %>
 
 <div class="d-contenaire">
-  <div class="d-box">
-    <div class="content">
-      <div class="spot-photos">
-        <% @spot.photos.each do |photo| %>
-          <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-        <% end %>
+  <div class="bgblur">
+    <div class="d-box">
+      <div class="content">
+        <div class="spot-photos">
+          <% @spot.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+          <% end %>
+        </div>
+        <h1 class="spot-ttl" ><%= @spot.name %></h1>
+        <div class="spot-content">
+          <p class="spot-description"><strong>Description:</strong> <%= @spot.description %></p>
+          <!--<p class="spot-coordinates"><strong>Coordinates: </strong><%= @spot.latitude %> <%= @spot.longitude %></p>-->
+          <a href="https://maps.google.com/?q=<%= @spot.latitude %>,<%= @spot.longitude %>" target="_blank" class="btn-gps" >Take me there</a> <!--https://maps.google.com/?q=<lat>,<lng> -->
+          <p class="spot-addedby"><strong>Added by: </strong><%= @spot.user.first_name %></p>
+          <%= @spot.facility %>
+        <p><%= @spot.difficulty %> </p>
+        </div>
       </div>
+
       <h1 class="spot-ttl" ><%= @spot.name %></h1>
       <div class="spot-content">
         <p class="spot-description"><strong>Description:</strong> <%= @spot.description %></p>
@@ -50,18 +62,28 @@ api = [ENV['API1'], ENV['API2'], ENV['API3'].sample %>
           <%= render "reviews/formreview", spot: @spot, review: @review %>
         <% else %>
           <%= link_to "Login to add review", new_user_session_path(@user) %>
+
+      <div class="review-form">
+        <ul>
+        <% @spot.reviews.each do |review| %>
+          <li><i class="fa-solid fa-quote-left"></i> <%= review.content %> - <%= "⭐️" * review.rating %> - by <%= review.user.first_name %>    <i class="fa-solid fa-quote-right"></i> <%= cl_image_tag review.photo.key, height: 150, width: 200, crop: :fill if review.photo.attached?  %></li>
         <% end %>
-      <ul>
-      <% @spot.reviews.each do |review| %>
-        <li><i class="fa-solid fa-quote-left"></i> <%= review.content %> - <%= "⭐️" * review.rating %> - by <%= review.user.first_name %>    <i class="fa-solid fa-quote-right"></i> <%= cl_image_tag review.photo.key, height: 150, width: 200, crop: :fill if review.photo.attached?  %></li>
-      <% end %>
-    </div>
-    <div class="links">
-      <%= link_to "Back to list", root_path, class:"btn-gps" %>
-      <% if policy(@spot).edit? %>
-        <%= link_to "Edit this spot", edit_spot_path(@spot), class:"btn-gps" %>
-      <% end %>
-      <%= link_to "Delete this spot", destroy_spot_path(@spot), data: {turbo_method: :delete, turbo_confirm: "You are about to delete this spot, are you sure?"} , class:"btn-gps" if policy(@spot).destroy? %>
+        </ul>
+        <% if user_signed_in? %>
+            <%= render "reviews/formreview", spot: @spot, review: @review %>
+          <% else %>
+            <%= link_to "Login to add review", new_user_session_path(@user) %>
+          <% end %>
+      </div>
+      <div class="links">
+        <%= link_to "Back to list", root_path, class:"btn-gps" %>
+        <% if policy(@spot).edit? %>
+          <%= link_to "Edit this spot", edit_spot_path(@spot), class:"btn-gps" %>
+
+        <% end %>
+        <%= link_to "Delete this spot", destroy_spot_path(@spot), data: {turbo_method: :delete, turbo_confirm: "You are about to delete this spot, are you sure?"} , class:"btn-gps" if policy(@spot).destroy? %>
+      </div>
     </div>
   </div>
 </div>
+

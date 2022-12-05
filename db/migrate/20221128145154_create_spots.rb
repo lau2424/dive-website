@@ -5,7 +5,7 @@ class CreateSpots < ActiveRecord::Migration[7.0]
       t.text :description
       t.float :longitude
       t.float :latitude
-      t.string :facility
+      t.text :facility, array: true, default: []
       t.string :equipment
       t.string :difficulty
 
