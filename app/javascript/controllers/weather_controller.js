@@ -22,7 +22,7 @@ export default class extends Controller {
   displayWeather(data) {
     console.log(data)
     this.iconTarget.src = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`
-    this.temperatureTarget.innerText = `${Math.round(data.main.temp)} °C`
+    this.temperatureTarget.innerText = `${Math.round(parseInt(data.main.temp))} °C`
     this.descriptionTarget.innerText = data.weather[0].description
 
   }

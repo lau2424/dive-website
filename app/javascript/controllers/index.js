@@ -13,6 +13,9 @@ application.register("hello", HelloController)
 import MapController from "./map_controller"
 application.register("map", MapController)
 
+import StarRatingController from "./star_rating_controller"
+application.register("star-rating", StarRatingController)
+
 import TooltipController from "./tooltip_controller"
 application.register("tooltip", TooltipController)
 

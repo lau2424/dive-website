@@ -16,7 +16,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to spot_path(@spot)
     else
-      render :new, status: :unprocessable_entity
+      render "spots/show", status: %i[unprocessable_entity see_other].to_s
     end
   end
 
