@@ -4,9 +4,9 @@
     <%= simple_form_for [spot, review] do |f| %>
       <%= f.input :content %>
       <%= f.label :Rate_this_spot_from_0_to_5 %>
-      <%= f.select(:rating, [0,1,2,3,4,5], {}, {:class => 'form-control'})%>
+      <%= f.select :rating, collection: [['0', '"⭐️"'], ['1', '"⭐️""⭐️"'], ['2', 'Expert']], label_method: :second, value_method: :first {:class => 'form-control'} %>
+
       <%= f.input :photo, as: :file %>
       <%= f.submit "Submit review", class: "btn-gps" %>
     <% end %>
   </div>
-
