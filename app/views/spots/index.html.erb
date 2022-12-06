@@ -4,17 +4,38 @@
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
 
-<div class="icon-subs">
-  <div class="icon-sub">
+<div class="icon-subs" data-controller="filter">
+<% if params[:filter] == "snorkeling"  %>
+  <div class="icon-sub highlighted" data-filter-target="selected" data-action="click->filter#filter">
     <%= image_tag "Snorkeling.png" %>
     <p>Snorkeling</p>
   </div>
-  <div class="icon-sub">
+<% else %>
+<div class="icon-sub" data-filter-target="snorkeling" data-action="click->filter#filter">
+    <%= image_tag "Snorkeling.png" %>
+    <p>Snorkeling</p>
+  </div>
+<% end %>
+<% if params[:filter] == "scubadiving"  %>
+  <div class="icon-sub highlighted" data-filter-target="selected" data-action="click->filter#filter">
     <%= image_tag "markerdive.png" %>
     <p>Scubadiving</p>
   </div>
-  <div class="icon-sub">
+<% else %>
+  <div class="icon-sub" data-filter-target="scubadiving" data-action="click->filter#filter">
+    <%= image_tag "markerdive.png" %>
+    <p>Scubadiving</p>
+  </div>
+<% end %>
+<% if params[:filter] == "snorkeling_scubadiving"  %>
+  <div class="icon-sub highlighted" data-filter-target="selected" data-action="click->filter#filter">
+    <%= image_tag "Scubadiving&Snorkeling.png" %>
+    <p>Scubadiving</p>
+  </div>
+<% else %>
+  <div class="icon-sub" data-filter-target="snorkeling_scubadiving" data-action="click->filter#filter">
     <%= image_tag "Scubadiving&Snorkeling.png" %>
     <p>Scubadiving<br> & Snorkeling</p>
   </div>
+<% end %>
 </div>

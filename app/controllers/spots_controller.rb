@@ -3,8 +3,26 @@ class SpotsController < ApplicationController
   def index
     @spots = policy_scope(Spot)
 
-    # The `geocoded` scope filters only flats with coordinates
-    @markers = @spots.geocoded.map do |spot|
+    if params[:filter] == "snorkeling"
+      build_markers("Snorkeling")
+    elsif params[:filter] == "scubadiving"
+      build_markers("Scuba Diving")
+    elsif params[:filter] == "snorkeling_scubadiving"
+      build_markers("Scuba Diving & Snorkeling")
+    else
+      @markers = @spots.geocoded.map do |spot|
+        {
+          lat: spot.latitude,
+          lng: spot.longitude,
+          info_window: render_to_string(partial: "info_window", locals: { spot: spot, average_rating: average_rating(spot) }),
+          image_url: helpers.asset_url(addapting_icon(spot))
+        }
+      end
+    end
+  end
+
+  def build_markers(category)
+    @markers = @spots.where(category: category).geocoded.map do |spot|
       {
         lat: spot.latitude,
         lng: spot.longitude,
