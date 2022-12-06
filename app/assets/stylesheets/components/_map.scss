@@ -13,7 +13,6 @@
   bottom: 0px;
   right: 0px;
   left: 0px;
-
 }
 
 .d-photo {
@@ -132,12 +131,19 @@ a {
     width: 50px;
   }
 
+  .icon-subs:hover {
+    cursor: pointer;
+  }
+
   .icon-subs p{
     font-size: 10px;
     margin: 0;
   }
 
-  
+  .highlighted {
+    background-color: rgba(172, 163, 163, 1);
+    border: solid white 1px;
+  }
 
   @media screen and (max-width: 600px) {
     .icon-subs {
