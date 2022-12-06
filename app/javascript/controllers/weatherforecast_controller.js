@@ -22,11 +22,11 @@ export default class extends Controller {
 
   displayFiveDaysWeather(data) {
     // Temperatures
-    this.td1Target.innerText = `${data.list[0].main.temp} °C`
-    this.td2Target.innerText = `${data.list[8].main.temp} °C`
-    this.td3Target.innerText = `${data.list[16].main.temp} °C`
-    this.td4Target.innerText = `${data.list[24].main.temp} °C`
-    this.td5Target.innerText = `${data.list[32].main.temp} °C`
+    this.td1Target.innerText = `${parseInt(data.list[0].main.temp)} °C`
+    this.td2Target.innerText = `${parseInt(data.list[8].main.temp)} °C`
+    this.td3Target.innerText = `${parseInt(data.list[16].main.temp)} °C`
+    this.td4Target.innerText = `${parseInt(data.list[24].main.temp)} °C`
+    this.td5Target.innerText = `${parseInt(data.list[32].main.temp)} °C`
 
     // Days
     const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];

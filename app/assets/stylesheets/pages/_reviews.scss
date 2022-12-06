@@ -3,3 +3,23 @@
   max-width: 900px;
   text-align: center;
 }
+
+.review_rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review_rating label {
+  font-size: 1.5em;
+  font-family: "Nunito", "Helvetica", "sans-serif";
+
+}
+
+.gl-star-rating--stars::after {
+  display: none;
+}
+.gl-star-rating--stars {
+  display: flex;
+  gap: 5px;
+}

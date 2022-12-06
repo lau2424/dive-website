@@ -3,7 +3,7 @@
   <div class="d-box">
     <%= simple_form_for [spot, review] do |f| %>
       <%= f.input :content %>
-      <%= f.label :Rate_this_spot_from_0_to_5 %>
+      <%= f.input :rating, collection: (1..5).to_a, label: "Rate your experience", required: true, input_html: {data: {controller: "star-rating"}}  %>
       <%= f.input :photo, as: :file %>
       <%= f.submit "Submit review", class: "btn-gps" %>
     <% end %>

@@ -6,5 +6,8 @@ Rails.application.routes.draw do
     resources :reviews
   end
 
+  get '/about', to: 'pages#about'
+
+
   resources :spots, only: :destroy, as: :destroy_spot
 end
