@@ -96,10 +96,14 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   text-align: center;
 }
 
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
 @media screen and (max-width: 600px) {
   .spot-photos > img {
     width: 320px;
   }
-
 }
