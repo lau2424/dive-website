@@ -6,15 +6,21 @@
 
 <div class="icon-subs">
   <div class="icon-sub">
-    <%= image_tag "Snorkeling.png" %>
+    <%= image_tag "Snorkeling.png", data: { controller: "tooltip",
+      bs_toggle: "tooltip", bs_placement: "top" },
+      title: "Click here to see only Snorkeling locations, unclick to reset" %>
     <p>Snorkeling</p>
   </div>
   <div class="icon-sub">
-    <%= image_tag "markerdive.png" %>
+    <%= image_tag "markerdive.png", data: { controller: "tooltip",
+      bs_toggle: "tooltip", bs_placement: "top" },
+       title: "Click here to see only Scuba Diving locations, unclick to reset" %>
     <p>Scubadiving</p>
   </div>
   <div class="icon-sub">
-    <%= image_tag "Scubadiving&Snorkeling.png" %>
+    <%= image_tag "Scubadiving&Snorkeling.png", data: { controller: "tooltip",
+      bs_toggle: "tooltip", bs_placement: "top" },
+      title: "Click here to see places were you can do both, unclick to reset" %>
     <p>Scubadiving<br> & Snorkeling</p>
   </div>
 </div>
