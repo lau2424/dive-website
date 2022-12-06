@@ -37,7 +37,7 @@ body {
 }
 
 .spot-addedby {
-  margin: 10px;
+  margin: 10px 0;
 }
 
 .spot-photos > img {
@@ -57,10 +57,21 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 .review-form > ul {
   list-style-type: none;
   padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .review-form > ul > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
   font-style: italic;
   margin: 10px 0;
+}
+
+.review-form > ul > li img {
+  border-radius: 50px;
 }
 
 .weatherforecast {
@@ -82,6 +93,7 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 
 .weather-icon {
   padding: 0 5px;
+  text-align: center;
 }
 
 

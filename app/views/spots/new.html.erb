@@ -11,9 +11,9 @@
       %>
       <%= f.input :longitude, input_html: {value: params["lng"], class:"d-none"} %>
       <%= f.input :latitude, input_html: {value: params["lat"], class:"d-none"} %>
-      <%= f.input :category, as: :radio_buttons, collection: [['0', 'Scuba Diving'], ['1', 'Snorkeling'], ['2', 'Scuba Diving & Snorkeling']], label_method: :second, value_method: :first %>
+      <%= f.input :category, as: :radio_buttons, collection: [['Scuba Diving', 'Scuba Diving'], ['Snorkeling', 'Snorkeling'], ['Scuba Diving & Snorkeling', 'Scuba Diving & Snorkeling']], label_method: :second, value_method: :first %>
       <%= f.input :facility, as: :check_boxes, collection: ['Restaurant', 'Toilet', 'Supermarket', 'Accomodation'], include_hidden: false %>
-      <%= f.input :difficulty, as: :radio_buttons, collection: [['1', 'Beginner'], ['1', 'Intermediate'], ['2', 'Expert']], label_method: :second, value_method: :first %>
+      <%= f.input :difficulty, as: :radio_buttons, collection: [['0', 'Beginner'], ['1', 'Intermediate'], ['2', 'Expert']], label_method: :second, value_method: :first %>
       <%= f.input :photos, as: :file, input_html: { multiple: true } %>
       <%= f.submit "Confirm", class:"btn-gps" %>
     <% end %>

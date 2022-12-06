@@ -6,7 +6,9 @@
     <% end %>
       <h3>NextDive_</h3>
     </div>
-    <%= link_to "Add spot", new_spot_path, class: "nav-link btn-add" %>
+    <div class="add-spot" >
+      <%= link_to "Add spot", new_spot_path, class: "nav-link btn-add", data: { controller: "tooltip",  bs_toggle: "tooltip", bs_placement: "top" }, title: "You can also zoom in and right click on the map to add a Spot !" %>
+    </div>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -26,6 +28,7 @@
             <%= image_tag "https://www.hecmsenior.com/wp-content/uploads/2021/06/Profile-Pic-Icon.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% end %>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <%= link_to "About", about_path, class: "dropdown-item" %>
             <%= link_to "Edit profile", edit_user_registration_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
           </div>
