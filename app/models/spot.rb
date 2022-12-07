@@ -7,7 +7,13 @@ class Spot < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
 
   validate :max_2_photos, :min_1_photo
-  validates :facility, presence: true
+  validates :category, presence: true
+  validates :difficulty, presence: true
+  validates :address, presence: true
+  validates :name, presence: true, length: { maximum: 20 }
+  validates :description, presence: true, length: { minimum: 50 }
+
+
 
   def max_2_photos
     errors.add(:photos, "maximum 2 pictures allowed") if photos.count > 2
