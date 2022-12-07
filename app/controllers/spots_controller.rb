@@ -63,9 +63,11 @@ class SpotsController < ApplicationController
 
   def update
     @spot = Spot.find(params[:id])
-    @spot.update(spot_params)
+    lat = @spot.latitude
+    long = @spot.longitude
     authorize @spot
     if @spot.update(spot_params)
+      @spot.update(longitude: long, latitude: lat)
       redirect_to spot_path(@spot)
     else
       render :edit, status: :unprocessable_entity
