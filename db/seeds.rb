@@ -486,6 +486,381 @@ file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHsJFmh-1
 spot_20.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
 spot_20.save
 
+spot_details_21 = {
+  name: "Nissaki Beach, Corfu, Greece",
+  latitude: 39.72551197366797,
+  longitude: 19.897043066467052,
+  category: "Snorkeling",
+  facility: ["Restaurant", "Accomodation"],
+  difficulty: "Beginner",
+  description: "Come to this rocky cove on Corfu’s northern coast to soak up the views of Albania – just across the water – before donning your snorkel. Head to the western end of the beach to spot large shoals of fish – the angelfish are our favourite – and to the southern end, to check out the black sea sponges which cling to the underwater boulders. When hunger strikes, head to the small taverna above the beach.",
+  user: user
+}
+spot_21 = Spot.new(spot_details_21)
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-4rr1teo1nUOToGewVA8NUWxN7VAHAzh65g&usqp=CAU')
+spot_21.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_21.save
+
+user_reviewer_7 = {
+  email: "hilary.albertine@hotmail.com",
+  password: "123456",
+  first_name: "Hilary",
+  last_name: "Clifford"
+}
+user_reviewer_7 = User.new(user_reviewer_7)
+user_reviewer_7.save
+
+review_content_21 = {
+  content: "Snorkelling is excellent. We took stale bread to feed the fish and we were surrounded by them . The children loved it and it made snorkelling all the more interesting. There is also god snorkelling on the far side of the jetty although it is more challenging swimming. The water is so clear here and the nearby restaurants are very good.",
+  rating: 5,
+  user: user_reviewer_7,
+  spot: spot_21
+}
+review_21 = Review.new(review_content_21)
+review_21.save
+
+spot_details_22 = {
+  name: "Koh Nang Yuan",
+  latitude: 10.11626628487825,
+  longitude: 99.81362276110397,
+  category: "Snorkeling",
+  facility: ["Toilet"],
+  difficulty: "Beginner",
+  description: "The coral reef here, made up of both soft and hard coral, is protected and relatively shallow, making it a great location for snorkelling. There is an entrance fee to the island since it is privately owned, but it is a small price to pay to explore and snorkel in some of the most stunning, sparkling water in the Gulf of Thailand.",
+  user: user
+}
+spot_22 = Spot.new(spot_details_22)
+file = URI.open('https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/0c/4a/47.jpg')
+spot_22.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_22.save
+
+user_reviewer_8 = {
+  email: "Lorenzo.albertine@hotmail.com",
+  password: "123456",
+  first_name: "Lorenzo",
+  last_name: "Cuttitta"
+}
+user_reviewer_8 = User.new(user_reviewer_8)
+user_reviewer_8.save
+
+review_content_22 = {
+  content: "Water and Sand beautiful snorkeling spot excellent with beautiful fish and shark super guide and very nice lunch.",
+  rating: 5,
+  user: user_reviewer_8,
+  spot: spot_22
+}
+review_22 = Review.new(review_content_22)
+review_22.save
+
+spot_details_23 = {
+  name: "Caletilla Beach",
+  latitude: 16.830741360112604,
+  longitude: -99.90542739239847,
+  category: "Snorkeling",
+  facility: ["Toilet", "Accomodation", "Restaurant"],
+  difficulty: "Beginner",
+  description: "Playa Caletilla is in the 25th place out of 87 beaches in the Guerrero region The beach is located in an urban area.
+  It is a tiny several bays coastline with crystal turquoise water and pure golden fine sand. The sharpness of entering the water is quite normal. This beach is suitable for different However, it is very crowded place during the season.",
+  user: user
+}
+spot_23 = Spot.new(spot_details_22)
+file = URI.open('https://m.discoverymundo.com/assets/63cac494/aa068a347e03032708916c42fff7dd5d-1.jpg')
+spot_23.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_23.save
+
+user_reviewer_9 = {
+  email: "Hamar.albertine@hotmail.com",
+  password: "123456",
+  first_name: "Hamar",
+  last_name: "Acstiff"
+}
+user_reviewer_9 = User.new(user_reviewer_9)
+user_reviewer_9.save
+
+review_content_23 = {
+  content: "Great place for snorkeling but very crowded indeed in summer.",
+  rating: 4,
+  user: user_reviewer_9,
+  spot: spot_23
+}
+review_23 = Review.new(review_content_23)
+review_23.save
+
+spot_details_24 = {
+  name: "Bahia Inglesa",
+  latitude: -27.103624487496056,
+  longitude: -70.8580143135329,
+  category: "Snorkeling",
+  facility: ["Accomodation", "Restaurant"],
+  difficulty: "Beginner",
+  description: "If you are looking for quiet spot, white sands and turquoise pools to snorkeling in, this is your place.
+  Bring your equipment; its warm temperatures make it an ideal place to enjoy water sports.",
+  user: user
+}
+spot_24 = Spot.new(spot_details_24)
+file = URI.open('https://i3.visitchile.com/img/GalleryContent/237/bahia_inglesa.jpg')
+spot_24.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_24.save
+
+user_reviewer_10 = {
+  email: "Sibarita.albertine@hotmail.com",
+  password: "123456",
+  first_name: "Sibarita",
+  last_name: "Belliord"
+}
+user_reviewer_10 = User.new(user_reviewer_10)
+user_reviewer_10.save
+
+review_content_24 = {
+  content: "Bahía Inglesa may be the only beaching Chile that looks like a Caribbean one i.e white sand and turquoise and clear waters. It is very nice for a day of sun at the beach. However, the water is very cold? (16-18 degrees centigrade).",
+  rating: 3,
+  user: user_reviewer_10,
+  spot: spot_24
+}
+review_24 = Review.new(review_content_24)
+review_24.save
+
+spot_details_25 = {
+  name: "Heron Island",
+  latitude: -23.441979452755962,
+  longitude: 151.91478159604966,
+  category: "Snorkeling",
+  facility: ["Accomodation", "Restaurant"],
+  difficulty: "Intermediate",
+  description: "Incredible snorkelling opportunities abound on Heron Island, and it’s the most popular of all guest activities. Whether you’re a mask and flipper novice or a more experienced diver, you’ll find plenty to marvel at just below the waters off Heron Island. Learn more about our snorkelling tour programmes below.",
+  user: user
+}
+spot_25 = Spot.new(spot_details_25)
+file = URI.open('https://i0.wp.com/www.freetworoam.com/wp-content/uploads/2016/11/simon.jpg?ssl=1')
+spot_25.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_25.save
+
+user_reviewer_11 = {
+  email: "Ana.Sib@hotmail.com",
+  password: "123456",
+  first_name: "Ana",
+  last_name: "Belgik"
+}
+user_reviewer_11 = User.new(user_reviewer_11)
+user_reviewer_11.save
+
+review_content_25 = {
+  content: "Being right on the Great Barrier Reef means that you can snorkel off the beach. If you haven’t snorkelled before or would like to practice, try Shark Bay (named after the harmless Shovel Nose Ray) or from the Gantry just in front of the Pandanus Lounge. Snorkelling in the harbour is not allowed between 8.00 am and 5.30 pm due to boat traffic.",
+  rating: 4,
+  user: user_reviewer_11,
+  spot: spot_25
+}
+review_25 = Review.new(review_content_25)
+review_25.save
+
+spot_details_26 = {
+  name: "Japanese Wreck",
+  latitude: -8.364438999811428,
+  longitude: 115.70071224155888,
+  category: "Scuba Diving",
+  facility: ["Toilet", "Restaurant"],
+  difficulty: "Advanced",
+  description: "The Japanese Wreck in Bali, a patrol boat from World War II, is a dive suitable only for the advanced divers, as the depth at which the wreck is lying is of 42 meters.
+  The divers can find here pieces of the wreck's engine, as well as its anchor and its winch.
+  Due to the rather restrictive depth, Nitrox is advised to be used as a breathing gas for this dive.
+  The remains of the Japanese Wreck lie on a flat and sandy bottom and among the species which can be found here are sweetlips and moray eels, among others.",
+  user: user
+}
+spot_26 = Spot.new(spot_details_26)
+file = URI.open('https://upload.wikimedia.org/wikipedia/commons/3/37/Kitsugawa_Maru_%2826816929208%29.jpg')
+spot_26.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_26.save
+
+user_reviewer_12 = {
+  email: "Cerfol.Sib@hotmail.com",
+  password: "123456",
+  first_name: "Cerfo",
+  last_name: "Sb"
+}
+user_reviewer_12 = User.new(user_reviewer_12)
+user_reviewer_12.save
+
+review_content_26 = {
+  content: "When we come here, we cannot see clearly the shipwreck, maybe because the wave was a bit strong when we come.",
+  rating: 3,
+  user: user_reviewer_12,
+  spot: spot_26
+}
+review_26 = Review.new(review_content_26)
+review_26.save
+
+spot_details_27 = {
+  name: "Bay of Islands",
+  latitude: -35.19604399167462,
+  longitude: 174.14803566439872,
+  category: "Scuba Diving",
+  facility: ["Accomodation"],
+  difficulty: "Intermediate",
+  description: "This marine rich region is also known as the Bay of Plenty – for good reasons! Wreck divers are drawn to the area to dive the HMNZS Canterbury or the Rainbow Warrior (Greenpeace’s flagship vessel, bombed by the French Secret Service). Both of these iconic New Zealand wrecks are now encrusted in stunning colourful jewel anemones and have become part of the living reef. The wrecks are also home to an abundance of fish life and macro critters. This area is rich in New Zealand history and a must see for all visitors.",
+  user: user
+}
+spot_27 = Spot.new(spot_details_27)
+file = URI.open('https://www.bay-of-islands.co.nz/wp-content/uploads/2015/12/rainbow-warrior-wreck-dive.jpg')
+spot_27.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_27.save
+
+user_reviewer_13 = {
+  email: "Amie.Bar@hotmail.com",
+  password: "123456",
+  first_name: "Amie",
+  last_name: "Barker"
+}
+user_reviewer_13 = User.new(user_reviewer_13)
+user_reviewer_13.save
+
+review_content_27 = {
+  content: "Ready to pack up and move here once I win the lotto. The  sights are  fantastic to discover underwater great scenarios! The locals are warm and welcoming. I'm in love with the area.",
+  rating: 5,
+  user: user_reviewer_13,
+  spot: spot_27
+}
+review_27 = Review.new(review_content_27)
+review_27.save
+
+spot_details_28 = {
+  name: "Shoalwater",
+  latitude: -32.302703339655764,
+  longitude: 115.70206609967381,
+  category: "Scuba Diving",
+  facility: ["Accomodation", "Restaurant"],
+  difficulty: "Intermediate",
+  description: "Cavernous reefs, seagrass meadows and even more shipwrecks can be found surrounding the islands of Shoalwater Marine Park, near Rockingham. In this area near Penguin Island, the Caves diving spot is part of a limestone reef ranging in depth of about 9 metres from the surface. You can also go on a guided swim with wild dolphins and explore the waters around Seal Island!",
+  user: user
+}
+spot_28 = Spot.new(spot_details_28)
+file = URI.open('https://www.dpaw.wa.gov.au/images/conservation-management/marine/marineparkswa/cod-eric-matson-aims.jpg')
+spot_28.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_28.save
+
+user_reviewer_14 = {
+  email: "Maria.Bartolo@hotmail.com",
+  password: "123456",
+  first_name: "Maria",
+  last_name: "Seppa"
+}
+user_reviewer_14 = User.new(user_reviewer_14)
+user_reviewer_14.save
+
+review_content_28 = {
+  content: "Nice shallow (max 18m) dive with enough interesting marine life to be interesting to more advanced divers as well. Turtles, leopard shark, big frogfish, angelfish.",
+  rating: 5,
+  user: user_reviewer_14,
+  spot: spot_28
+}
+review_28 = Review.new(review_content_28)
+review_28.save
+
+spot_details_29 = {
+  name: "Shoalwater Islands Marine Park",
+  latitude: -13.482659636867355,
+  longitude: 48.237458365635476,
+  category: "Scuba Diving",
+  facility: ["Restaurant"],
+  difficulty: "Beginner",
+  description: "At the heart of the marine park, this site offers great corals and fauna: ideal for beginners, it will also enchant the experienced diver who wants to take it easy!",
+  user: user
+}
+spot_29 = Spot.new(spot_details_29)
+file = URI.open('https://www.adventure-blue-vision.com/wp-content/uploads/2017/12/diver-2-Adventure-Blue-Vision.jpg')
+spot_29.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+file = URI.open('https://www.jenmansafaris.com/wp-content/uploads/2017/10/diving-689825_1920-e1508315614495.jpg')
+spot_29.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_29.save
+
+user_reviewer_15 = {
+  email: "Brigitte.Bartolo@hotmail.com",
+  password: "123456",
+  first_name: "Brigitte",
+  last_name: "Trumol"
+}
+user_reviewer_15 = User.new(user_reviewer_15)
+user_reviewer_15.save
+
+review_content_29 = {
+  content: "We had a great time, every dive.
+  Being from the Caribbean, I was blown away at the beauty of the reef around Nosy-Be. A treasure.",
+  rating: 5,
+  user: user_reviewer_15,
+  spot: spot_29
+}
+review_29 = Review.new(review_content_29)
+review_29.save
+
+spot_details_30 = {
+  name: "Arvoredo Islands",
+  latitude: -27.28015221729453,
+  longitude: -48.36658819016069,
+  category: "Scuba Diving",
+  facility: ["Toilet"],
+  difficulty: "Intermediate",
+  description: " One of the must-visit places for scuba diving for travelers in Brazil, this is located in Santa Catarina in the southern part of the country. The most popular diving spot here is the Biological Reserve Centre of Arvoredo which is famous for its crystal clear waters rich in both flora and fauna. You can see dolphins, sea turtles, whales, and octopus while diving. The place is suitable for both beginners and experienced divers. The average depth for a dive varies between 15 meters to 30 meters. There are also facilities for diving at night. Overall, this is a place which will surely reward you with some of the best underwater sights.",
+  user: user
+}
+
+spot_30 = Spot.new(spot_details_30)
+file = URI.open('https://www.xtremespots.com/wp-content/uploads/2013/02/Scuba-Diving-at-Florianopolis-620x413.jpg')
+spot_30.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_30.save
+
+user_reviewer_16 = {
+  email: "Aftab.Bartolo@hotmail.com",
+  password: "123456",
+  first_name: "Aftab",
+  last_name: "Trada"
+}
+user_reviewer_16 = User.new(user_reviewer_16)
+user_reviewer_16.save
+
+review_content_30 = {
+  content: "I was up by the island to dive. HOwever, I didn't really get on the island but most people really just go up to Arvoredo to get a few dives in. I unfortunately went there on a day when the weather wasn't great, and didn't get to see much at all. I would suggest going on a fair-weather day to be able to get more out of the arvoredo experience.",
+  rating: 2,
+  user: user_reviewer_16,
+  spot: spot_30
+}
+review_30 = Review.new(review_content_30)
+review_30.save
+
+spot_details_31 = {
+  name: "Banana Island",
+  latitude: 8.1171830015094,
+  longitude: -13.212132639494758,
+  category: "Scuba Diving & Snorkeling",
+  facility: ["Accomodation"],
+  difficulty: "Intermediate",
+  description: "Banana Island offers the best scuba diving in Sierra Leone and some of the best scuba diving in West Africa. The islands are 5-15 miles off the coast, amongst the rich aquatic life and the clear waters of the ocean. Visibility is far better than the mainland shores and the diversity of species is greater due to the proximity to the open waters. The length/shape of the island ensures that calm/clear waters can be always found around the island regardless of wind and tides. Established in 2009 the scuba diving center Banana Divers is equipped with everything needed for a safe and pleasant experience. Several boats, experienced skippers, 2 breathing air compressors, up to date equipment and a Padi Professional will offer great time to experienced divers or beginners who want just a taste of scuba diving with the PADI DSD program.",
+  user: user
+}
+
+spot_31 = Spot.new(spot_details_31)
+file = URI.open('https://bananaislandsierraleone.com/wp-content/uploads/2018/10/diving-fix-1024x680.jpg')
+spot_31.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+file = URI.open('https://bananaislandsierraleone.com/wp-content/uploads/2018/10/ss10-Large-fix-1024x680.jpg')
+spot_31.photos.attach(io: file, filename: 'spot.jpg', content_type: 'image/jpg')
+spot_31.save
+
+user_reviewer_17 = {
+  email: "Javier.Bartolo@hotmail.com",
+  password: "123456",
+  first_name: "Javier",
+  last_name: "Fernando"
+}
+user_reviewer_17 = User.new(user_reviewer_17)
+user_reviewer_17.save
+
+review_content_31 = {
+  content: "A visit to Banana Island is a highlight to any trip to Sierra Leone. But if you sign up for diving you are in for a treat. The dive sites reveal wild life and traces of history. Big fishes and colourful settings are as magnificent as any tropic waters. Shallow reef are also good for snorkelling. But the historic sites are unbelievable.",
+  rating: 5,
+  user: user_reviewer_17,
+  spot: spot_31
+}
+
+review_31 = Review.new(review_content_31)
+review_31.save
 
 # the review content and reviewer Start 29/11 15h40
 
