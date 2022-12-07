@@ -98,8 +98,16 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 
 .links {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
+}
+
+.facilities {
+  font-size: 25px;
+}
+
+.facilities i {
+  padding-right: 10px;
 }
 
 @media screen and (max-width: 600px) {

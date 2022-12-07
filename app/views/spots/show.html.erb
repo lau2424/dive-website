@@ -17,7 +17,22 @@ api = [ENV['API1'], ENV['API2'], ENV['API3'].sample %>
           <p class="spot-description"><strong>Description:</strong> <%= @spot.description %></p>
           <!--<p class="spot-coordinates"><strong>Coordinates: </strong><%= @spot.latitude %> <%= @spot.longitude %></p>-->
           <a href="https://maps.google.com/?q=<%= @spot.latitude %>,<%= @spot.longitude %>" target="_blank" class="btn-gps" >Take me there</a> <!--https://maps.google.com/?q=<lat>,<lng> -->
-          <p class="spot-addedby"><strong>Added by: </strong><%= @spot.user.first_name %></p>
+          <p class="spot-addedby"><strong>Added by: </strong><%= @spot.user.first_name %></p><br>
+          <p> <strong>Available facilities:</strong></p>
+          <div class="facilities">
+            <% if @spot.facility.include?("Restaurant") %>
+              <i class="fa-solid fa-utensils"></i>
+            <% end %>
+            <% if @spot.facility.include?("Toilet") %>
+              <i class="fa-solid fa-toilet"></i>
+            <% end %>
+            <% if @spot.facility.include?("Supermarket") %>
+              <i class="fa-solid fa-cart-shopping"></i>
+            <% end %>
+            <% if @spot.facility.include?("Accomodation") %>
+              <i class="fa-solid fa-house"></i>
+          <% end %>
+          </div>
         </div>
       </div>
       <div data-controller="weatherforecast" class="weatherforecast">
@@ -66,9 +81,9 @@ api = [ENV['API1'], ENV['API2'], ENV['API3'].sample %>
       <div class="links">
         <%= link_to "Back to list", root_path, class:"btn-gps" %>
         <% if policy(@spot).edit? %>
-          <%= link_to "Edit this spot", edit_spot_path(@spot), class:"btn-gps" %>
+          <%= link_to "Edit spot", edit_spot_path(@spot), class:"btn-gps" %>
         <% end %>
-        <%= link_to "Delete this spot", destroy_spot_path(@spot), data: {turbo_method: :delete, turbo_confirm: "You are about to delete this spot, are you sure?"} , class:"btn-gps" if policy(@spot).destroy? %>
+        <%= link_to "Delete spot", destroy_spot_path(@spot), data: {turbo_method: :delete, turbo_confirm: "You are about to delete this spot, are you sure?"} , class:"btn-gps" if policy(@spot).destroy? %>
       </div>
     </div>
   </div>
