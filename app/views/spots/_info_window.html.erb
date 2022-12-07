@@ -1,28 +1,27 @@
-
-<div class="mapboxgl-window">
-    <div class="d-photo">
-    <%= cl_image_tag spot.photos.first.key %>
-          <div class="d-rating">
-        <% unless average_rating.nil? %>
-          <% average_rating.to_i.times do  %>
-            ⭐️
-          <% end %>
-          <% end %>
+<%= link_to spot_path(spot), :action => 'go' do %>
+  <div class="mapboxgl-window">
+      <div class="d-photo">
+      <%= cl_image_tag spot.photos.first.key %>
+            <div class="d-rating">
+          <% unless average_rating.nil? %>
+            <% average_rating.to_i.times do  %>
+              ⭐️
+            <% end %>
+            <% end %>
+        </div>
       </div>
-    </div>
 
-    <div class="d-info">
-      <h2><%= spot.name %></h2>
-    </div>
-
+      <div class="d-info">
+        <h2><%= spot.name %></h2>
+      </div>
 
 
-    <div class="d-box-weather" data-controller="weather">
-      <p hidden data-weather-target="latitude"><%= spot.latitude %></p>
-      <p hidden data-weather-target="longitude"><%= spot.longitude %></p>
-      <img src="" id="weather-icon" alt="Weather Icon" data-weather-target="icon">
-      <p data-weather-target="temperature"></p>
-    </div>
-</div>
 
-<div class="d-p"><%= link_to "More info...", spot_path(spot) %></div>
+      <div class="d-box-weather" data-controller="weather">
+        <p hidden data-weather-target="latitude"><%= spot.latitude %></p>
+        <p hidden data-weather-target="longitude"><%= spot.longitude %></p>
+        <img src="" id="weather-icon" alt="Weather Icon" data-weather-target="icon">
+        <p data-weather-target="temperature"></p>
+      </div>
+  </div>
+<% end %>
