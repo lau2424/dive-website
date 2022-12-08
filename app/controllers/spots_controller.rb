@@ -52,6 +52,8 @@ class SpotsController < ApplicationController
     if @spot.save
       redirect_to spot_path(@spot)
     else
+      params[:lat] = @spot.latitude
+      params[:lng] = @spot.longitude
       render :new, status: :unprocessable_entity
     end
   end
