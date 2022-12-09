@@ -22,22 +22,22 @@ api = [ENV['API1'], ENV['API2'], ENV['API3'].sample %>
           <div class="facilities">
             <% if @spot.facility == nil %>
             <% # do nothing %>
-            <%else @spot.facility.include?("Restaurant") %>
+            <%elsif @spot.facility.include?("Restaurant") %>
               <i class="fa-solid fa-utensils"></i>
             <% end %>
             <% if @spot.facility == nil %>
             <% # do nothing %>
-            <% else @spot.facility.include?("Toilet") %>
+            <% elsif @spot.facility.include?("Toilet") %>
               <i class="fa-solid fa-toilet"></i>
             <% end %>
             <% if @spot.facility == nil %>
             <% # do nothing %>
-            <% else @spot.facility.include?("Supermarket") %>
+            <% elsif @spot.facility.include?("Supermarket") %>
               <i class="fa-solid fa-cart-shopping"></i>
             <% end %>
             <% if @spot.facility == nil %>
             <% # do nothing %>
-            <% else @spot.facility.include?("Accomodation") %>
+            <% elsif @spot.facility.include?("Accomodation") %>
               <i class="fa-solid fa-house"></i>
           <% end %>
           </div>

@@ -52,3 +52,18 @@
     color: white;
   }
 }
+
+.collapse:not(.show) {
+  display: flex;
+  justify-content: flex-end;
+  text-align: end;
+}
+
+.navbar-toggler {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+}
