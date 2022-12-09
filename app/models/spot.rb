@@ -10,7 +10,7 @@ class Spot < ApplicationRecord
   validates :category, presence: true
   validates :difficulty, presence: true
   validates :name, presence: true, length: { maximum: 20 }
-  validates :description, presence: true, length: { minimum: 50 }
+  validates :description, presence: true, length: { minimum: 10 }
 
 
 
