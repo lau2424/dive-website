@@ -1,1 +1,3 @@
 Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+
+NextDive_ is intended to fellow divers, from all around the world, beginners or pro, to find and share diving spots, for scubadiving, snorkeling, or both. Navigating the map or just using the searchbox, you can find locations added by previous users, use the navigation tool to find the best route to get there, have an overview of the facilities on site, the weather forecast for the next 5 days, the difficulty level, access reviews from users, or add your own spot or review.
